@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
-import NavBar from './header/navbar';
+import NavBar from './header/Navbar';
+import Hero from './hero/Hero';
 
 const App : React.FC = () => {
   return (
-    <div >
+    <div>
       <NavBar />
-      <div className="Content">
-        <h2> Welcome </h2>
-      </div>
+      
+      <Hero />
     </div>
   );
 }

@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 import Slide from '@mui/material/Slide';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { styled } from '@mui/system';
+import logo from "./r-logo.png";
 
 interface HideOnScrollProps {
   children: ReactElement;
@@ -29,6 +30,11 @@ const StyledButton = styled(Button)({
   marginLeft: '1rem', 
 });
 
+const LogoImage = styled("img")({
+  height: '50px',  // or any size you want
+  marginRight: '1rem'
+});
+
 function HideOnScroll({ children }: HideOnScrollProps) {
   const trigger = useScrollTrigger();
 
@@ -44,6 +50,7 @@ const NavBar : React.FC = () => {
       <HideOnScroll>
         <StyledAppBar position="fixed" elevation={0}>
             <Toolbar>
+                <LogoImage src={logo} alt="Logo" />
                 <StyledTypography variant="h4">
                     Robert Walling
                 </StyledTypography>
