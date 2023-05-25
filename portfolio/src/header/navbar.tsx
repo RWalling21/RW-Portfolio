@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useState } from 'react';
 import Toolbar from '@mui/material/Toolbar';
 import Slide from '@mui/material/Slide';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
@@ -23,28 +23,35 @@ function HideOnScroll({ children }: HideOnScrollProps) {
 
 const NavBarButtons = ['Home', 'AboutMe', 'Projects', 'Resume'];
 
-const NavBar : React.FC = () => {
-    return (
-      <HideOnScroll>
-        <StyledAppBar position="fixed" elevation={0}>
-            <Toolbar>
-                <LogoImage src={logo} alt="Logo" />
-                <StyledTypography variant="h4">
-                    Robert Walling
-                </StyledTypography>
-                {NavBarButtons.map(buttonName => 
-                  <StyledButton 
-                    variant="text"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    disableRipple
-                  >
-                    {buttonName}
-                  </StyledButton>
-                )}
-            </Toolbar>
-        </StyledAppBar>
-      </HideOnScroll>
+const NavBar: React.FC = () => {
+  const [selectedButton, setSelectedButton] = useState(0);
+
+  const handleButtonClick = (index: number) => {
+    setSelectedButton(index);
+  };
+
+  return (
+    <HideOnScroll>
+      <StyledAppBar position="fixed" elevation={0}>
+        <Toolbar>
+          <LogoImage src={logo} alt="Logo" />
+          <StyledTypography variant="h4">
+            Robert Walling
+          </StyledTypography>
+          {NavBarButtons.map((buttonName, index) => (
+            <StyledButton
+              key={index}
+              variant="text"
+              disableRipple
+              onClick={() => handleButtonClick(index)}
+              className={selectedButton === index ? 'selected' : ''}
+            >
+              {buttonName}
+            </StyledButton>
+          ))}
+        </Toolbar>
+      </StyledAppBar>
+    </HideOnScroll>
   );
 }
 

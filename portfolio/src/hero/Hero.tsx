@@ -1,5 +1,6 @@
 import React from 'react';
 import backgroundImage from './herobg.png'; 
+import AboutMe from '../aboutMe/AboutMe';
 
 const Hero : React.FC = () => {
     const heroStyle = {
@@ -15,7 +16,7 @@ const Hero : React.FC = () => {
 
     return (
         <div style={heroStyle}>
-            <h1> Welcome </h1>
+            <AboutMe />
         </div>
     )
 }
