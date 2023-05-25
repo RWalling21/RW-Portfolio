@@ -3,7 +3,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Slide from '@mui/material/Slide';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 
-import logo from "./r-logo.png";
+import logo from "./logo.png";
 
 import { StyledTypography, StyledAppBar, StyledButton, LogoImage } from './NavBarStyles'
 
@@ -33,7 +33,14 @@ const NavBar : React.FC = () => {
                     Robert Walling
                 </StyledTypography>
                 {NavBarButtons.map(buttonName => 
-                  <StyledButton variant="outlined">{buttonName}</StyledButton>
+                  <StyledButton 
+                    variant="text"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    disableRipple
+                  >
+                    {buttonName}
+                  </StyledButton>
                 )}
             </Toolbar>
         </StyledAppBar>
