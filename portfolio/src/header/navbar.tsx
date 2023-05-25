@@ -1,39 +1,15 @@
 import React, { ReactElement } from 'react';
-import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import Slide from '@mui/material/Slide';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
-import { styled } from '@mui/system';
+
 import logo from "./r-logo.png";
+
+import { StyledTypography, StyledAppBar, StyledButton, LogoImage } from './NavBarStyles'
 
 interface HideOnScrollProps {
   children: ReactElement;
 }
-
-const StyledTypography = styled(Typography)({
-  flexGrow: 1,
-  fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif', 
-  fontStyle: 'italic',
-  color: '#EDEDED', 
-});
-
-const StyledAppBar = styled(AppBar)({
-  backgroundColor: 'transparent', 
-  borderBottom: '1px solid #EDEDED', 
-});
-
-const StyledButton = styled(Button)({
-  color: '#EDEDED', 
-  borderColor: '#EDEDED', 
-  marginLeft: '1rem', 
-});
-
-const LogoImage = styled("img")({
-  height: '50px',  // or any size you want
-  marginRight: '1rem'
-});
 
 function HideOnScroll({ children }: HideOnScrollProps) {
   const trigger = useScrollTrigger();
@@ -45,6 +21,8 @@ function HideOnScroll({ children }: HideOnScrollProps) {
   );
 }
 
+const NavBarButtons = ['Home', 'AboutMe', 'Projects', 'Resume'];
+
 const NavBar : React.FC = () => {
     return (
       <HideOnScroll>
@@ -54,10 +32,9 @@ const NavBar : React.FC = () => {
                 <StyledTypography variant="h4">
                     Robert Walling
                 </StyledTypography>
-                <StyledButton variant="outlined">Home</StyledButton>
-                <StyledButton variant="outlined">AboutMe</StyledButton>
-                <StyledButton variant="outlined">Projects</StyledButton>
-                <StyledButton variant="outlined">Resume</StyledButton>
+                {NavBarButtons.map(buttonName => 
+                  <StyledButton variant="outlined">{buttonName}</StyledButton>
+                )}
             </Toolbar>
         </StyledAppBar>
       </HideOnScroll>
