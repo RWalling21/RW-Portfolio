@@ -8,6 +8,9 @@ import ContactMe from '../contactMe/contactMe';
 import Footer from '../footer/Footer';
 
 const Hero : React.FC = () => {
+
+    // Smooth scroll between sections
+
     return (
         <Flex 
             direction="column"

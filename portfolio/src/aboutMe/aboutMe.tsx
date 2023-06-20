@@ -19,7 +19,7 @@ const AboutMe : React.FC = () => {
     
                 <Text fontSize="xl"> Books that have influenced me </Text>
                 {/* 
-                    I want a carocel that swipes through the books, or a custom 
+                    I want a carousel that swipes through the books, or a custom 
                     component that looks like a book, flipping pages
                 */}
 
