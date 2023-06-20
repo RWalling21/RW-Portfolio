@@ -1,12 +1,12 @@
-import "./Hero.css"
 import React from 'react';
 import AboutMe from '../aboutMe/AboutMe';
+import { Flex } from "@chakra-ui/react";
 
 const Hero : React.FC = () => {
     return (
-        <div className="content">
+        <Flex bg="elements.background" height="100vh">
             <AboutMe />
-        </div>
+        </Flex>
     )
 }
 

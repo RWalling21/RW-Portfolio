@@ -1,17 +1,21 @@
 import { extendTheme } from "@chakra-ui/react";
 
 const Theme = extendTheme({
-    config: {
-        initialColorMode: "dark",
-        useSystemColorMode: false,
-    },
     colors: {
-        teal: {
-            500: "#38B2AC",
+        elements: {
+            background: "#232946",
+            headline: "#fffffe",
+            paragraph: "#b8c1ec",
+            button: "#eebbc3",
+            buttonText: "#232946",
         },
-        darkGray: {
-            500: "#2D3748",
-        }
+        illustration: {
+            stroke: "#121629",
+            main: "#b8c1ec",
+            highlight: "#eebbc3",
+            secondary: "#fffffe",
+            tertiary: "#eebbc3",
+        },
     },
 });
 
