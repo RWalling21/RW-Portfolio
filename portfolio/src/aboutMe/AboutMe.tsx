@@ -1,12 +1,12 @@
 import React from 'react';
-import { Text, useTheme } from '@chakra-ui/react';
+import { Image, Text, useTheme } from '@chakra-ui/react';
 
 const AboutMe: React.FC = () => {
   const theme = useTheme();
 
   return (
     <div>
-      <Text color={theme.colors.elements.button} fontSize="4xl">
+      <Text color={theme.colors.elements.button} fontSize="5xl">
         Hello there! I'm Robert
       </Text>
 
@@ -23,6 +23,8 @@ const AboutMe: React.FC = () => {
         explore new technologies, and take on new challenges. Feel free to reach out to discuss software development, potential collaborations,
         or the latest tech trends!
       </Text>
+
+      <Image />
     </div>
   );
 };

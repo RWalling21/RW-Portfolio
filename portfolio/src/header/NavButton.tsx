@@ -2,10 +2,10 @@ import React from "react";
 import { Button, useTheme } from "@chakra-ui/react";
 
 interface NavButtonProps {
-    children: React.ReactNode;
+    text: string;
 }
 
-const NavButton : React.FC<NavButtonProps> = ({ children }) => {
+const NavButton : React.FC<NavButtonProps> = ({ text }) => {
     const theme = useTheme();
     
     return (
@@ -15,7 +15,7 @@ const NavButton : React.FC<NavButtonProps> = ({ children }) => {
             size='md'
             variant='contained'
         >
-            { children }
+            { text }
         </Button>
     )
 }
