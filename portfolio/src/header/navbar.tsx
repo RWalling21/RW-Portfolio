@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from "./logo.png";
-import { Button, Box, Stack, Flex, Text } from "@chakra-ui/react";
+import { Button, Box, Stack, Flex, Text, Image } from "@chakra-ui/react";
 
 interface NavButtonProps {
     children: React.ReactNode;
@@ -21,14 +21,12 @@ const Navbar : React.FC = () => {
             align="center"
             justify="space-between"
             wrap="wrap"
-            padding="1.5rem"
-            bg="teal.500"
+            padding="1rem"
+            bg="darkGray.500"
             color="white"
         >
             <Flex align="center" mr={5}>
-                <Text fontSize="lg" fontWeight="bold">
-                    Logo
-                </Text>
+                <h2> Robert Walling </h2>
             </Flex>
 
             <Box
