@@ -19,10 +19,10 @@ const Navbar : React.FC = () => {
             </Flex>
 
             <Stack spacing={8} direction='row' align='center'>
-                <NavButton text="Home" />
-                <NavButton text="About Me" />
-                <NavButton text="Projects" />
-                <NavButton text="Contact Me" />
+                <NavButton text="Home" section="Home" />
+                <NavButton text="About Me" section="AboutMe" />
+                <NavButton text="Projects" section="Projects" />
+                <NavButton text="Contact Me" section="ContactMe" />
             </Stack>
         </Flex>
     );

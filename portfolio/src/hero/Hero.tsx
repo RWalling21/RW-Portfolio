@@ -17,7 +17,7 @@ const Hero : React.FC = () => {
                 <Home />
             </Box>
 
-            <Box id="About Me">
+            <Box id="AboutMe">
                 <AboutMe />
             </Box>
 
@@ -25,7 +25,7 @@ const Hero : React.FC = () => {
                 <Projects />
             </Box>
 
-            <Box id="Contact Me">
+            <Box id="ContactMe">
                 <ContactMe />
             </Box>
 
