@@ -1,7 +1,8 @@
 import React from 'react';
-import { Flex } from "@chakra-ui/react";
+import { Flex, Box } from "@chakra-ui/react";
 
 import Home from '../home/Home';
+import AboutMe from '../aboutMe/aboutMe';
 import Projects from '../projects/Projects';
 import ContactMe from '../contactMe/contactMe';
 import Footer from '../footer/Footer';
@@ -12,13 +13,25 @@ const Hero : React.FC = () => {
             direction="column"
             bg="elements.background"
         >
-            <Home />
+            <Box id="Home">
+                <Home />
+            </Box>
 
-            <Projects />
+            <Box id="About Me">
+                <AboutMe />
+            </Box>
 
-            <ContactMe />
+            <Box id="Projects">
+                <Projects />
+            </Box>
 
-            <Footer />
+            <Box id="Contact Me">
+                <ContactMe />
+            </Box>
+
+            <Box id="Footer">
+                <Footer />
+            </Box>
         </Flex>
     )
 }

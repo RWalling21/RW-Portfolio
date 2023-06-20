@@ -2,8 +2,6 @@ import React from 'react';
 import { Flex, Box, Image, Text, useTheme, VStack, Button } from '@chakra-ui/react';
 
 const Home : React.FC = () => {
-  const theme = useTheme();
-
   return (
     <Flex
       bg="elements.background" 
@@ -19,11 +17,11 @@ const Home : React.FC = () => {
         maxW="600px"
         mr="2rem"
       >
-        <Text color={theme.colors.elements.button} fontSize="5xl">
+        <Text color="elements.button" fontSize="5xl">
           Hello there! I'm Robert
         </Text>
 
-        <Text color={theme.colors.elements.paragraph} fontSize="lg">
+        <Text color="elements.paragraph" fontSize="lg">
           I'm a second-year Software Engineering student at the Rochester Institute of Technology (RIT).
           I'm deeply passionate about developing software solutions that make a difference. My technical journey began with Python and has
           since expanded to a wide range of languages and tools, from JavaScript, Java, and C++ to React, Angular, and NodeJS.

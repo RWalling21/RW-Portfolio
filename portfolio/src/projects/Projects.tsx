@@ -4,7 +4,7 @@ import React from 'react';
 const Projects : React.FC = () => {
     return (
         <Box 
-            bg="#d4d8f0" 
+            bg="elements.background" 
             height="150vh" 
             pr="4rem" pl="4rem"
         >
