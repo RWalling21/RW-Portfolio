@@ -1,15 +1,17 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Flex, Text } from '@chakra-ui/react';
 import React from 'react';
 
 const ContactMe : React.FC = () => {
     return (
-        <Box
+        <Flex
             bg="#eebbc3" 
             height="150vh" 
             pr="4rem" pl="4rem"
         >
-            <h1> Contact Me </h1>
-        </Box>
+            <Box mt="4rem">
+                <Text fontSize="4xl" color="elements.headline"> Contact me </Text>
+            </Box>
+        </Flex>
     )
 }
 

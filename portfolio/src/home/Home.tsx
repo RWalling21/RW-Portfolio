@@ -1,10 +1,10 @@
 import React from 'react';
-import { Flex, Box, Image, Text, useTheme, VStack, Button } from '@chakra-ui/react';
+import { Flex, Box, Image, Text, VStack, Button } from '@chakra-ui/react';
 
 const Home : React.FC = () => {
   return (
     <Flex
-      bg="elements.background" 
+      bg="navy.background" 
       height="75vh" 
       pr="4rem" pl="4rem"
       mt="4rem"
@@ -17,11 +17,11 @@ const Home : React.FC = () => {
         maxW="600px"
         mr="2rem"
       >
-        <Text color="elements.button" fontSize="5xl">
+        <Text color="navy.headline" fontSize="5xl">
           Hello there! I'm Robert
         </Text>
 
-        <Text color="elements.paragraph" fontSize="lg">
+        <Text color="navy.paragraph" fontSize="lg">
           I'm a second-year Software Engineering student at the Rochester Institute of Technology (RIT).
           I'm deeply passionate about developing software solutions that make a difference. My technical journey began with Python and has
           since expanded to a wide range of languages and tools, from JavaScript, Java, and C++ to React, Angular, and NodeJS.
@@ -30,7 +30,7 @@ const Home : React.FC = () => {
         <Button 
           ml="auto" mt="1rem"
           size="lg"
-          bg="elements.button"
+          bg="navy.button"
           variant='contained'
         > 
           Grab my Resume! 

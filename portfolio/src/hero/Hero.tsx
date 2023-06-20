@@ -11,7 +11,7 @@ const Hero : React.FC = () => {
     return (
         <Flex 
             direction="column"
-            bg="elements.background"
+            bg="navy.background"
         >
             <Box id="Home">
                 <Home />

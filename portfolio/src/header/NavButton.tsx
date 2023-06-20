@@ -10,8 +10,8 @@ const NavButton : React.FC<NavButtonProps> = ({ text }) => {
         <Button 
             as="a"
             href={`#${text}`}
-            bg="elements.button" 
-            color="elements.buttonText"
+            bg="navy.button" 
+            color="navy.buttonText"
             size='md'
             variant='contained'
         >

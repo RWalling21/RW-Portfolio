@@ -10,7 +10,7 @@ const Navbar : React.FC = () => {
             justify="space-between"
             wrap="wrap"
             pl="4rem" pr="4rem" pt="3rem" pb="3rem"
-            bg="elements.background"
+            bg="navy.background"
             color="white"
         >
             <Flex align="center">
