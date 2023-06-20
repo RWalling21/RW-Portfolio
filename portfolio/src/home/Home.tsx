@@ -1,7 +1,7 @@
 import React from 'react';
 import { Flex, Box, Image, Text, useTheme, VStack, Button } from '@chakra-ui/react';
 
-const AboutMe: React.FC = () => {
+const Home : React.FC = () => {
   const theme = useTheme();
 
   return (
@@ -30,7 +30,7 @@ const AboutMe: React.FC = () => {
         </Text>
 
         <Button 
-          marginLeft="auto" 
+          ml="auto" mt="1rem"
           size="lg"
           bg="elements.button"
           variant='contained'
@@ -47,4 +47,4 @@ const AboutMe: React.FC = () => {
   );
 };
 
-export default AboutMe;
+export default Home;

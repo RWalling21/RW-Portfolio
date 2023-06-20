@@ -10,8 +10,8 @@ const NavButton : React.FC<NavButtonProps> = ({ text }) => {
     
     return (
         <Button 
-            bg={theme.colors.elements.button} 
-            color={theme.colors.elements.buttonText} 
+            bg="elements.button" 
+            color="elements.buttonText"
             size='md'
             variant='contained'
         >
