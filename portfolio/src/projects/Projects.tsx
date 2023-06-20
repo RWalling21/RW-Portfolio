@@ -3,6 +3,9 @@ import React from 'react';
 import ProjectCard from './ProjectCard';
 
 const Projects : React.FC = () => {
+    
+    // Rename to experience? Group together work and projects here?
+
     return (
         <Flex 
             mt="4rem"

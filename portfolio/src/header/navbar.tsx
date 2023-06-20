@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stack, Flex, Text, Image } from "@chakra-ui/react";
+import { Stack, Flex, Text, Button, Image } from "@chakra-ui/react";
 import NavButton from './NavButton';
 
 const Navbar : React.FC = () => {      
@@ -27,6 +27,7 @@ const Navbar : React.FC = () => {
                 <NavButton text="About Me" section="AboutMe" />
                 <NavButton text="Projects" section="Projects" />
                 <NavButton text="Contact Me" section="ContactMe" />
+                <Button variant="outline" color="navy.button"> Resume </Button>
             </Stack>
         </Flex>
     );
