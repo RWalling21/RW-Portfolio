@@ -5,7 +5,7 @@ const AboutMe : React.FC = () => {
     return (
         <Flex
             bg="lightBlue.background" 
-            height="100vh" 
+            height="125vh" 
             pr="4rem" pl="4rem"
         >
             <Box mt="4rem">

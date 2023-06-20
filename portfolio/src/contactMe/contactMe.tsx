@@ -5,7 +5,7 @@ const ContactMe : React.FC = () => {
     return (
         <Flex
             bg="#eebbc3" 
-            height="150vh" 
+            height="125vh" 
             pr="4rem" pl="4rem"
         >
             <Box mt="4rem">

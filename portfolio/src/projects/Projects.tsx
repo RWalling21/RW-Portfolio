@@ -7,7 +7,7 @@ const Projects : React.FC = () => {
         <Flex 
             mt="4rem"
             bg="navy.background" 
-            height="150vh" 
+            height="125vh" 
             pr="4rem" pl="4rem"
         >
             <Box>

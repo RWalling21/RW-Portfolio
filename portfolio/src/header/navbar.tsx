@@ -9,7 +9,7 @@ const Navbar : React.FC = () => {
             align="center"
             justify="space-between"
             wrap="wrap"
-            pl="4rem" pr="4rem" pt="3rem" pb="3rem"
+            pl="4rem" pr="4rem" pt="2rem" pb="3rem"
             bg="navy.background"
             color="white"
         >
