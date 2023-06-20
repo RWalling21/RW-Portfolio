@@ -1,5 +1,6 @@
-import React from 'react';
 import './App.css';
+
+import React from 'react';
 import NavBar from './header/Navbar';
 import Hero from './hero/Hero';
 import { ChakraProvider, CSSReset, extendTheme } from "@chakra-ui/react";

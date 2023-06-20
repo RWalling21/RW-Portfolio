@@ -1,5 +1,6 @@
-import React from "react";
-import { Box, Stack, Flex, Text, Button } from "@chakra-ui/react";
+import React from 'react';
+import logo from "./logo.png";
+import { Button, Box, Stack, Flex, Text } from "@chakra-ui/react";
 
 interface NavButtonProps {
     children: React.ReactNode;
