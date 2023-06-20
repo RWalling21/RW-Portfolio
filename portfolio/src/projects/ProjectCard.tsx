@@ -28,7 +28,9 @@ const ProjectCard: React.FC<ProjectProps> = ({ title, imageSrc, description, git
             my="3" 
             borderRadius="md" 
             objectFit="cover" 
-            fallbackSrc='https://via.placeholder.com/75' 
+            fallbackSrc='https://via.placeholder.com/125' 
+            alignSelf="center"
+            maxW="125" maxH="125"
         />
 
         <Text color={"lightBlue.cardParagraph"}>
