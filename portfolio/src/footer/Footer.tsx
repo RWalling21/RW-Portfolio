@@ -1,15 +1,23 @@
 import React from "react";
-import { Box } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 
 const Footer: React.FC = () => {
     return (
-        <Box
-            bg="elements.background" 
-            height="50vh" 
+        <Flex
+            bg="navy.background" 
+            height="10vh" 
             pr="4rem" pl="4rem"
+            justify="center"
+            align="flex-end"
+            mb="1rem"
         >
-            <h1> Footer </h1>
-        </Box>
+            <Text 
+                fontSize="md" 
+                color="navy.paragraph" 
+            > 
+                Designed and Engineered by Robert Walling.    
+            </Text>
+        </Flex>
     )
 };
 
