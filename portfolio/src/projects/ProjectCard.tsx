@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Text, Image, Button } from "@chakra-ui/react";
+import { Flex, Text, Image, Button, Box } from "@chakra-ui/react";
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 
 interface ProjectProps {
@@ -16,38 +16,42 @@ const ProjectCard: React.FC<ProjectProps> = ({ title, imageSrc, description, git
         p="5"
         borderRadius="md" 
         shadow="md"
-        width="20vw"
-        direction="column"
+        width="40vw"
+        direction="row"
     >
-        <Text fontSize="xl" fontWeight="bold" color={"lightBlue.cardHeading"}>
-            {title}
-        </Text>
+        <Box mr="5">
+            <Image 
+                src={imageSrc} 
+                alt={title} 
+                borderRadius="md" 
+                objectFit="cover" 
+                fallbackSrc='https://via.placeholder.com/100' 
+                maxW="100" 
+                maxH="100"
+            />
+        </Box>
 
-        <Image 
-            src={imageSrc} alt={title} 
-            my="3" 
-            borderRadius="md" 
-            objectFit="cover" 
-            fallbackSrc='https://via.placeholder.com/125' 
-            alignSelf="center"
-            maxW="125" maxH="125"
-        />
+        <Box flex="1">
+            <Text fontSize="xl" fontWeight="bold" color={"lightBlue.cardHeading"}>
+                {title}
+            </Text>
 
-        <Text color={"lightBlue.cardParagraph"}>
-            {description}
-        </Text>
+            <Text color={"lightBlue.cardParagraph"}>
+                {description}
+            </Text>
 
-        <Button 
-            as="a" 
-            href={githubLink}
-            colorScheme="teal" 
-            variant="outline" 
-            mt="3" 
-            rightIcon={<ExternalLinkIcon />} 
-            alignSelf="flex-end"
+            <Button 
+                as="a" 
+                href={githubLink}
+                colorScheme="teal" 
+                variant="outline" 
+                mt="3" 
+                rightIcon={<ExternalLinkIcon />} 
+                alignSelf="flex-end"
             >
-            GitHub
-        </Button>
+                GitHub
+            </Button>
+        </Box>
     </Flex>
   );
 };
