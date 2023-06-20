@@ -1,11 +1,16 @@
+import { Box } from '@chakra-ui/react';
 import React from 'react';
 
-const ContactMe : React.FC = () => {
+const Projects : React.FC = () => {
     return (
-        <div>
+        <Box 
+            bg="#d4d8f0" 
+            height="150vh" 
+            pr="4rem" pl="4rem"
+        >
             <h1> Projects </h1>
-        </div>
+        </Box>
     )
 }
 
-export default ContactMe;
+export default Projects;

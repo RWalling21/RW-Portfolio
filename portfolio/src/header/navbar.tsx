@@ -14,7 +14,7 @@ const Navbar : React.FC = () => {
             color="white"
         >
             <Flex align="center">
-                <Image fallbackSrc='https://via.placeholder.com/75' />
+                <Image src="logo.png" fallbackSrc='https://via.placeholder.com/75' mr="1rem" />
                 <Text fontSize="2xl"> Robert Walling </Text>
             </Flex>
 
