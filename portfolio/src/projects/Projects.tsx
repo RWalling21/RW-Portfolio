@@ -14,19 +14,25 @@ const Projects : React.FC = () => {
                 <Text fontSize="4xl" color="navy.headline"> Projects </Text>
 
                 <VStack>
+                    {/* Shader */}
                     <ProjectCard 
                         title="Test123"
                         imageSrc="" 
                         description='Amet ad eu irure velit mollit exercitation irure aliqua consequat.' 
                         githubLink='' 
                     />
-                    
+
+                    {/* Portfolio */}
                     <ProjectCard 
                         title="Test123" 
                         imageSrc="" 
                         description='Deserunt laborum proident ut nisi consectetur culpa laborum.' 
                         githubLink='' 
                     />
+
+                    {/* TechNet */}
+
+                    {/* More to come */}
                 </VStack>
             </Box>
         </Flex>
