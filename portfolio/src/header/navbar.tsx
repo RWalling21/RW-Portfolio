@@ -1,60 +1,56 @@
-import React, { ReactElement } from 'react';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import Slide from '@mui/material/Slide';
-import useScrollTrigger from '@mui/material/useScrollTrigger';
-import { styled } from '@mui/system';
+import React from "react";
+import { Box, Stack, Flex, Text, Button } from "@chakra-ui/react";
 
-interface HideOnScrollProps {
-  children: ReactElement;
+interface NavButtonProps {
+    children: React.ReactNode;
 }
 
-const StyledTypography = styled(Typography)({
-  flexGrow: 1,
-  fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif', 
-  fontStyle: 'italic',
-  color: '#EDEDED', 
-});
-
-const StyledAppBar = styled(AppBar)({
-  backgroundColor: 'transparent', 
-  borderBottom: '1px solid #EDEDED', 
-});
-
-const StyledButton = styled(Button)({
-  color: '#EDEDED', 
-  borderColor: '#EDEDED', 
-  marginLeft: '1rem', 
-});
-
-function HideOnScroll({ children }: HideOnScrollProps) {
-  const trigger = useScrollTrigger();
-
-  return (
-    <Slide appear={false} direction="down" in={!trigger}>
-      {children}
-    </Slide>
-  );
-}
-
-const NavBar : React.FC = () => {
+const NavButton : React.FC<NavButtonProps> = ({ children }) => {
     return (
-      <HideOnScroll>
-        <StyledAppBar position="fixed" elevation={0}>
-            <Toolbar>
-                <StyledTypography variant="h4">
-                    Robert Walling
-                </StyledTypography>
-                <StyledButton variant="outlined">Home</StyledButton>
-                <StyledButton variant="outlined">AboutMe</StyledButton>
-                <StyledButton variant="outlined">Projects</StyledButton>
-                <StyledButton variant="outlined">Resume</StyledButton>
-            </Toolbar>
-        </StyledAppBar>
-      </HideOnScroll>
-  );
+        <Button colorScheme='teal' size='sm' variant='outline'>
+            { children }
+        </Button>
+    )
 }
 
-export default NavBar;
+const Navbar : React.FC = () => {  
+    return (
+        <Flex
+            as="nav"
+            align="center"
+            justify="space-between"
+            wrap="wrap"
+            padding="1.5rem"
+            bg="teal.500"
+            color="white"
+        >
+            <Flex align="center" mr={5}>
+                <Text fontSize="lg" fontWeight="bold">
+                    Logo
+                </Text>
+            </Flex>
+
+            <Box
+                display={{ base: "none", md: "block" }}
+                flexBasis={{ base: "100%", md: "auto" }}
+            >
+                <Stack spacing={16} direction='row' align='center'>
+                    <NavButton>
+                        Home 
+                    </NavButton>
+                    <NavButton>
+                        About Me
+                    </NavButton>
+                    <NavButton>
+                        Projects
+                    </NavButton>
+                    <NavButton>
+                        Contact Me
+                    </NavButton>
+                </Stack>
+            </Box>
+        </Flex>
+    );
+}
+export default Navbar;
+
