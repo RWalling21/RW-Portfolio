@@ -8,12 +8,12 @@ const ContactMe : React.FC = () => {
     return (
         <Flex
             bg="lightBlue.background" 
-            height="125vh" 
+            height="75vh" 
             pr="4rem" pl="4rem"
             align="center"
             justify="center"
         >
-            <Box mt="4rem" textAlign="center" color="lightBlue.paragraph">
+            <Box textAlign="center" color="lightBlue.paragraph">
                 <Text fontSize="5xl" color="elements.headline"> Contact me </Text>
 
                 <Text maxW="40vw" size="lg" fontWeight="bold" mt="1rem"> 
