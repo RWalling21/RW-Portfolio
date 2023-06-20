@@ -3,6 +3,10 @@ import { Stack, Flex, Text, Image } from "@chakra-ui/react";
 import NavButton from './NavButton';
 
 const Navbar : React.FC = () => {      
+
+    // Have it scroll as I scroll, and fade away when scrolling up
+    // Could apply a transparency on the start of a scroll
+
     return (
         <Flex
             as="nav"

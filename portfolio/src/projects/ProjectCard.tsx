@@ -25,9 +25,8 @@ const ProjectCard: React.FC<ProjectProps> = ({ title, imageSrc, description, git
                 alt={title} 
                 borderRadius="md" 
                 objectFit="cover" 
-                fallbackSrc='https://via.placeholder.com/100' 
-                maxW="100" 
-                maxH="100"
+                fallbackSrc='https://via.placeholder.com/125' 
+                maxW="125" maxH="125"
             />
         </Box>
 

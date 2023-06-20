@@ -17,6 +17,8 @@ const Footer: React.FC = () => {
             > 
                 Designed and Engineered by Robert Walling.    
             </Text>
+
+            {/* Add Links to relevant social media */}
         </Flex>
     )
 };
