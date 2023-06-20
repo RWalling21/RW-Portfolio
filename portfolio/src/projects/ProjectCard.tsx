@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Box, Text, Image, Button } from "@chakra-ui/react";
+import { Flex, Text, Image, Button } from "@chakra-ui/react";
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 
 interface ProjectProps {
@@ -39,7 +39,7 @@ const ProjectCard: React.FC<ProjectProps> = ({ title, imageSrc, description, git
 
         <Button 
             as="a" 
-            href={githubLink} 
+            href={githubLink}
             colorScheme="teal" 
             variant="outline" 
             mt="3" 

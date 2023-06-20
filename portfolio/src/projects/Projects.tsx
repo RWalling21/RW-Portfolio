@@ -14,9 +14,9 @@ const Projects : React.FC = () => {
                 <Text fontSize="4xl" color="navy.headline"> Projects </Text>
 
                 <VStack>
-                    <ProjectCard title="Test123" imageSrc="" description='lorem ipsum' githubLink='' />
+                    <ProjectCard title="Test123" imageSrc="" description='Amet ad eu irure velit mollit exercitation irure aliqua consequat.' githubLink='' />
 
-                    <ProjectCard title="Test123" imageSrc="" description='lorem ipsum' githubLink='' />
+                    <ProjectCard title="Test123" imageSrc="" description='Deserunt laborum proident ut nisi consectetur culpa laborum.' githubLink='' />
                 </VStack>
             </Box>
         </Flex>
