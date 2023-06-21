@@ -1,44 +1,30 @@
-import { Flex, Box, Text } from '@chakra-ui/react';
 import React from 'react';
+import { Grid, Box, Text } from '@chakra-ui/react';
+
 
 const AboutMe : React.FC = () => {
     return (
-        <Flex
+        <Grid 
+            templateColumns={{ base: "1fr", md: "1fr 1fr" }} 
+            gap={6}
             bg="lightBlue.background" 
             height="125vh" 
             pr="12rem" pl="12rem"
         >
-            <Box mt="4rem">
-                <Text fontSize="4xl" color="lightBlue.headline"> About Me </Text>
-
-                <Text fontSize="xl"> Experience </Text>
-                {/* 
-                    Simple bulleted list of some places I've worked 
-                    Add some interesting geometry to the background
-                */}
-
-                <Text fontSize="xl"> Skills </Text>
-                {/* 
-                    Some sort of interesting graph to show where my skills lie
-                    might be a cool implementation of three?
-                */}
-
-                <Text fontSize="xl"> Books that have influenced me </Text>
-                {/* 
-                    I want a carousel that swipes through the books, or a custom 
-                    component that looks like a book, flipping pages
-                */}
-
-                <Text fontSize="xl"> Relevant Coursework </Text>
-                {/* 
-                    Some of the most relevant courses I have taken and what I learned
-                    261 (Web API Development)
-                    262 (Design Patterns)
-                    256 (Project Management and Managenent patterns)
-                    Calc, Linear Algebra, Discrete Math
-                */}
+            <Box maxW="33vw" mt="4rem">
+                <Text fontSize="5xl" color="lightBlue.headline" textAlign="center"> Who am I? </Text>
+                <Text fontSize="lg" color="lightBlue.paragraph"> Eiusmod ex commodo incididunt enim aliqua ullamco eiusmod anim occaecat dolore anim. Laboris nisi aliqua culpa eu eiusmod Lorem id tempor laborum labore irure occaecat labore. Ea est laborum quis dolor laboris reprehenderit esse ea officia labore et excepteur officia ex. Duis sit consectetur nisi ullamco labore. Laborum velit laboris quis esse ad consequat ipsum excepteur minim nisi officia. </Text>
             </Box>
-        </Flex>
+
+            <Box maxW = "33vw" mt="4rem">
+                <Text fontSize="5xl" color="lightBlue.headline" textAlign="center"> Skills </Text>
+                <Text fontSize="lg" color="lightBlue.paragraph"> Eiusmod ex commodo incididunt enim aliqua ullamco eiusmod anim occaecat dolore anim. Laboris nisi aliqua culpa eu eiusmod Lorem id tempor laborum labore irure occaecat labore. Ea est laborum quis dolor laboris reprehenderit esse ea officia labore et excepteur officia ex. Duis sit consectetur nisi ullamco labore. Laborum velit laboris quis esse ad consequat ipsum excepteur minim nisi officia. </Text>
+            </Box>
+            
+            <Grid templateColumns="1fr" width="100%" justifyItems="center">
+                <Text fontSize="5xl" color="lightBlue.headline" textAlign="center"> Books that have influenced me </Text>
+            </Grid>
+        </Grid>
     )
 }
 
