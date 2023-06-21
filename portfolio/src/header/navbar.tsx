@@ -15,7 +15,7 @@ const Navbar : React.FC = () => {
             {isVisible && (
                 <MotionFlex {...motionProps}>
                     <Flex align="center">
-                        <Image src="" fallbackSrc='https://via.placeholder.com/75' mr="1rem" />
+                        <Image src="" fallbackSrc='https://via.placeholder.com/50' mr="1rem" />
                         <Text fontSize="2xl"> Robert Walling </Text>
                     </Flex>
 
@@ -24,7 +24,14 @@ const Navbar : React.FC = () => {
                         <NavButton text="About Me" section="AboutMe" />
                         <NavButton text="Projects" section="Projects" />
                         <NavButton text="Contact Me" section="ContactMe" />
-                        <Button variant="outline" color="navy.button" > Resume </Button>
+                        <Button 
+                            variant="outline" 
+                            color="navy.button"
+                            borderColor="navy.button"
+                            _hover={{ bg: "navy.button", color: "navy.buttonText" 
+                        }}> 
+                            Resume
+                        </Button>
                     </Stack>
                 </MotionFlex>
             )}
