@@ -62,7 +62,7 @@ const Projects : React.FC = () => {
                             x: 0,
                             transition: {
                                 staggerChildren: 0.5,
-                                duration: 1
+                                duration: 0.5
                             }
                         }
                     }}

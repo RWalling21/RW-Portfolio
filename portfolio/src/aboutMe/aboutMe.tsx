@@ -6,7 +6,6 @@ import SkillBar from './SkillBar';
 
 const MotionBox = motion(Box);
 const MotionVStack = motion(VStack);
-const MotionHStack = motion(HStack);
 
 const AboutMe : React.FC = () => {
     const [ref, inView] = useInView({
@@ -15,13 +14,12 @@ const AboutMe : React.FC = () => {
 
     return (
         <HStack
-            spacing={6}
+            spacing={12}
             bg="lightBlue.background"
             minH="125vh"
             pr="12rem"
             pl="12rem"
             alignItems="start"
-            justifyContent="center"
         >
             <MotionVStack
                 ref={ref}
@@ -49,11 +47,11 @@ const AboutMe : React.FC = () => {
                 mt="4rem"
                 direction="column"
                 alignItems="center"
-                animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }}
+                animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 200 }}
                 transition={{ duration: 1.5 }}
                 spacing={4}
             >
-                <Text fontSize="5xl" color="lightBlue.headline" textAlign="center" mb="1rem">Skills</Text>
+                <Text fontSize="6xl" color="lightBlue.paragraph" textAlign="center"> Skills </Text>
 
                 <VStack display="flex" flexWrap="wrap" alignItems="center" spacing={1}>
                     <SkillBar skill='Java' proficiency={85} />
