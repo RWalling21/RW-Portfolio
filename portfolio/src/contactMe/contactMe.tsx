@@ -39,6 +39,7 @@ const ContactMe : React.FC = () => {
                     _hover={{ bg: "navy.buttonHover" }}
                     borderWidth="1px"
                     borderColor={"navy.background"}
+                    onClick={() => window.location.href = "mailto:rhw8246@rit.edu"}
                 > 
                     Email Me     
                 </Button>
