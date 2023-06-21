@@ -13,22 +13,37 @@ interface ProjectProps {
 const MotionFlex = motion(Flex);
 
 const ProjectCard: React.FC<ProjectProps> = ({ title, imageSrc, description, skills, githubLink }) => {
-  return (
-    <MotionFlex 
-        whileHover={{ 
-            scale: 1.05, 
-            cursor: "pointer",
-            boxShadow: "0px 0px 8px white"
-        }}
-        transition={{ duration: 0.3 }}
-        bg={"lightBlue.cardBackground"} 
-        p="5"
-        borderRadius="md" 
-        shadow="md"
-        width="40vw"
-        direction="row"
-        onClick={() => window.open(githubLink, "_blank")}
-    >
+    const variants = {
+        hidden: { opacity: 0, x: 200 },
+        show: { 
+            opacity: 1, 
+            x: 0, 
+            transition: {
+                x: { duration: 1 }, 
+                opacity: { duration: 1 }, 
+                scale: { duration: 0.3 }, 
+            }
+        }
+    }
+  
+    return (
+        <MotionFlex 
+            whileHover={{ 
+                scale: 1.05, 
+                cursor: "pointer",
+                boxShadow: "0px 0px 8px white"
+            }}
+            variants={variants} 
+            initial="hidden" 
+            animate="show"
+            bg={"lightBlue.cardBackground"} 
+            p="5"
+            borderRadius="md" 
+            shadow="md"
+            width="40vw"
+            direction="row"
+            onClick={() => window.open(githubLink, "_blank")}
+        >
         <Flex mr="5">
             <Image 
                 src={imageSrc} 
