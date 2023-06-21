@@ -47,7 +47,7 @@ const Projects : React.FC = () => {
                         title="Test123" 
                         imageSrc="" 
                         description='Deserunt laborum proident ut nisi consectetur culpa laborum.' 
-                        skills={["React", "Typescript", "MariaDB", "PHP", "Postman", "Docker"]}
+                        skills={["React", "Typescript", "MariaDB", "PHP"]}
                         githubLink='' 
                     />
 

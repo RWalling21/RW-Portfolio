@@ -1,8 +1,7 @@
 import React from "react";
-import { Flex, Text, Image, Button, Box, HStack } from "@chakra-ui/react";
-import { ExternalLinkIcon } from '@chakra-ui/icons'
+import { Flex, Text, Image, HStack, Spacer } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import SkillButton from "./SkillButton";
-
 interface ProjectProps {
   title: string;
   imageSrc: string;
@@ -11,17 +10,26 @@ interface ProjectProps {
   githubLink: string;
 }
 
+const MotionFlex = motion(Flex);
+
 const ProjectCard: React.FC<ProjectProps> = ({ title, imageSrc, description, skills, githubLink }) => {
   return (
-    <Flex 
+    <MotionFlex 
+        whileHover={{ 
+            scale: 1.05, 
+            cursor: "pointer",
+            boxShadow: "0px 0px 8px 2px rgba(0, 0, 0, 0.2)" 
+        }}
+        transition={{ duration: 0.3 }}
         bg={"lightBlue.cardBackground"} 
         p="5"
         borderRadius="md" 
         shadow="md"
         width="40vw"
         direction="row"
+        onClick={() => window.open(githubLink, "_blank")}
     >
-        <Box mr="5">
+        <Flex mr="5">
             <Image 
                 src={imageSrc} 
                 alt={title} 
@@ -29,10 +37,11 @@ const ProjectCard: React.FC<ProjectProps> = ({ title, imageSrc, description, ski
                 objectFit="cover" 
                 fallbackSrc='https://via.placeholder.com/125' 
                 maxW="125" maxH="125"
+                align="center"
             />
-        </Box>
+        </Flex>
 
-        <Box flex="1">
+        <Flex flex="1" direction="column">
             <Text fontSize="xl" fontWeight="bold" color={"lightBlue.cardHeading"}>
                 {title}
             </Text>
@@ -41,24 +50,15 @@ const ProjectCard: React.FC<ProjectProps> = ({ title, imageSrc, description, ski
                 {description}
             </Text>
             
-            <HStack display="flex" flexWrap="wrap" spacing={2}>
+            <HStack display="flex" flexWrap="wrap" mt="0.5rem" mb="0.5rem" spacing={2}>
                 {skills.map((skill : string) => (
                     <SkillButton key={skill}> {skill} </SkillButton>
                 ))}
             </HStack>
 
-            <Button 
-                as="a" 
-                href={githubLink}
-                colorScheme="teal" 
-                variant="outline"
-                mt="3" 
-                rightIcon={<ExternalLinkIcon />} 
-            >
-                GitHub
-            </Button>
-        </Box>
-    </Flex>
+            <Spacer />
+        </Flex>
+    </MotionFlex>
   );
 };
 
