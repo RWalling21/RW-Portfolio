@@ -1,23 +1,48 @@
 import React from 'react';
-import { Grid, Box, Text, Button, HStack } from '@chakra-ui/react';
+import { Flex, Box, Text, Button, HStack, Image, Grid } from '@chakra-ui/react';
 
 const AboutMe : React.FC = () => {
     return (
-        <Grid 
-            templateRows={{ base: "1fr 1fr 1fr", md: "1fr 1fr" }} 
+        <Grid
+            templateColumns={{base: "1fr", md: "repeat(2, 1fr)"}}
+            templateRows={{base: "repeat(3, auto)", md: "repeat(2, auto)"}} 
             gap={6}
             bg="lightBlue.background" 
             minH="100vh" 
             pr="12rem" pl="12rem"
+            justifyContent="center"
         >
-            <Box maxW="33vw" mt="4rem" gridColumn={{ base: "1 / span 2", md: "1 / span 1" }}>
+            <Box 
+                gridColumn={{base: "1 / span 1", md: "1 / span 1"}} 
+                gridRow={{base: "1 / span 1", md: "1 / span 2"}} 
+                maxW = "33vw" 
+                mt="4rem"
+            >
                 <Text fontSize="5xl" color="lightBlue.headline" textAlign="center" mb="1rem"> Who am I? </Text>
-                <Text fontSize="lg" color="lightBlue.paragraph"> Eiusmod ex commodo incididunt enim aliqua ullamco eiusmod anim occaecat dolore anim. Laboris nisi aliqua culpa eu eiusmod Lorem id tempor laborum labore irure occaecat labore. Ea est laborum quis dolor laboris reprehenderit esse ea officia labore et excepteur officia ex. Duis sit consectetur nisi ullamco labore. Laborum velit laboris quis esse ad consequat ipsum excepteur minim nisi officia. </Text>
+                <Text fontSize="lg" color="lightBlue.paragraph" textAlign="center" maxW="40vw"> 
+                    Nostrud duis dolore est irure magna voluptate occaecat duis esse. Do velit eiusmod eu aute anim minim do sint voluptate proident ad. Id irure irure occaecat sit exercitation. Aliquip eu est tempor in minim. Adipisicing consectetur est officia do amet cupidatat.
+                </Text>
             </Box>
+            
+            <Flex 
+                gridColumn={{base: "1 / span 1", md: "2 / span 1"}} 
+                gridRow="1 / span 1" 
+                maxW = "33vw" 
+                mt="4rem"
+                justifyContent="center"
+            >
+                <Image src="" fallbackSrc='https://via.placeholder.com/150' mr="1rem" borderRadius="full" />
+            </Flex>
 
-            <Box maxW = "33vw" mt="4rem" gridColumn={{ base: "1 / span 2", md: "2 / span 1" }}>
+            <Flex 
+                gridColumn={{base: "1 / span 1", md: "2 / span 1"}} 
+                gridRow={{base: "3 / span 1", md: "2 / span 1"}}
+                maxW = "33vw" 
+                justifySelf="center" 
+                direction="column"
+            >
                 <Text fontSize="5xl" color="lightBlue.headline" textAlign="center" mb="1rem"> Skills </Text>
-                <HStack display="flex" flexWrap="wrap" justifyContent="center" spacing={6}>
+                <HStack display="flex" flexWrap="wrap" justifyContent="center" spacing={4}>
                     <Button> Java </Button>
                     <Button> Javascript </Button>
                     <Button> Typescript </Button>
@@ -28,11 +53,7 @@ const AboutMe : React.FC = () => {
                     <Button> MariaDB </Button>
                     <Button> Docker </Button>
                 </HStack>
-            </Box>
-            
-            <Box gridColumn="1 / span 2">
-                <Text fontSize="5xl" color="lightBlue.headline" textAlign="center"> Books that have influenced me </Text>
-            </Box>
+            </Flex>
         </Grid>
     )
 }
