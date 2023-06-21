@@ -14,29 +14,31 @@ const Projects : React.FC = () => {
             pr="12rem" pl="12rem"
             justify="flex-end"
         >
-            <Box flex="1" color="navy.paragraph" mt="14rem">
+            <Box flex="1" color="navy.paragraph" mt="12rem">
                 <Text fontSize="lg">
                     Qui amet do proident ea in minim aliqua ea dolor do qui ea. Ex sint pariatur velit commodo nulla eu consequat. Lorem est eu laboris incididunt reprehenderit adipisicing deserunt consequat laboris laborum. Laboris mollit sint mollit sunt fugiat non labore do minim in aute labore. Cupidatat officia irure anim occaecat culpa. Laborum esse anim quis consequat reprehenderit voluptate ad amet commodo est consectetur. Adipisicing labore ut laboris consectetur laborum cupidatat.
                 </Text>
             </Box>
             
             <Box flex="2">
-                <Text fontSize="4xl" color="navy.headline" textAlign="center"> Projects </Text>
+                <Text fontSize="4xl" color="navy.headline" textAlign="center"> Recent Projects </Text>
 
                 <VStack mt="2rem" spacing={6}>
                     {/* Shader */}
                     <ProjectCard 
-                        title="Test123"
+                        title="Comix"
                         imageSrc="" 
                         description='Amet ad eu irure velit mollit exercitation irure aliqua consequat.' 
+                        skills={["Design Patterns", "Test123"]}
                         githubLink='' 
                     />
 
                     {/* Portfolio */}
                     <ProjectCard 
-                        title="Test123" 
+                        title="Portfolio" 
                         imageSrc="" 
                         description='Deserunt laborum proident ut nisi consectetur culpa laborum.' 
+                        skills={["React", "Chakra UI", "TypeScript"]}
                         githubLink='' 
                     />
 
@@ -45,6 +47,7 @@ const Projects : React.FC = () => {
                         title="Test123" 
                         imageSrc="" 
                         description='Deserunt laborum proident ut nisi consectetur culpa laborum.' 
+                        skills={["React", "Typescript", "MariaDB", "PHP", "Postman", "Docker"]}
                         githubLink='' 
                     />
 

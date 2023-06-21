@@ -1,15 +1,17 @@
 import React from "react";
-import { Flex, Text, Image, Button, Box } from "@chakra-ui/react";
+import { Flex, Text, Image, Button, Box, HStack } from "@chakra-ui/react";
 import { ExternalLinkIcon } from '@chakra-ui/icons'
+import SkillButton from "./SkillButton";
 
 interface ProjectProps {
   title: string;
   imageSrc: string;
   description: string;
+  skills: string[];
   githubLink: string;
 }
 
-const ProjectCard: React.FC<ProjectProps> = ({ title, imageSrc, description, githubLink }) => {
+const ProjectCard: React.FC<ProjectProps> = ({ title, imageSrc, description, skills, githubLink }) => {
   return (
     <Flex 
         bg={"lightBlue.cardBackground"} 
@@ -38,15 +40,20 @@ const ProjectCard: React.FC<ProjectProps> = ({ title, imageSrc, description, git
             <Text color={"lightBlue.cardParagraph"}>
                 {description}
             </Text>
+            
+            <HStack display="flex" flexWrap="wrap" spacing={2}>
+                {skills.map((skill : string) => (
+                    <SkillButton key={skill}> {skill} </SkillButton>
+                ))}
+            </HStack>
 
             <Button 
                 as="a" 
                 href={githubLink}
                 colorScheme="teal" 
-                variant="outline" 
+                variant="outline"
                 mt="3" 
                 rightIcon={<ExternalLinkIcon />} 
-                alignSelf="flex-end"
             >
                 GitHub
             </Button>
