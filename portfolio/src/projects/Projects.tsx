@@ -24,12 +24,21 @@ const Projects : React.FC = () => {
                 <Text fontSize="4xl" color="navy.headline" textAlign="center"> Recent Projects </Text>
 
                 <VStack mt="2rem" spacing={6}>
-                    {/* Shader */}
+                    {/* Comix */}
                     <ProjectCard 
                         title="Comix"
                         imageSrc="" 
                         description='Amet ad eu irure velit mollit exercitation irure aliqua consequat.' 
-                        skills={["Design Patterns", "Test123"]}
+                        skills={["Design Patterns", "Java", "UML", "JUnit"]}
+                        githubLink='' 
+                    />
+
+                    {/* TechNet */}
+                    <ProjectCard 
+                        title="Technet" 
+                        imageSrc="" 
+                        description='Deserunt laborum proident ut nisi consectetur culpa laborum.' 
+                        skills={["React", "Typescript", "MariaDB", "PHP"]}
                         githubLink='' 
                     />
 
@@ -42,16 +51,7 @@ const Projects : React.FC = () => {
                         githubLink='' 
                     />
 
-                    {/* TechNet */}
-                    <ProjectCard 
-                        title="Test123" 
-                        imageSrc="" 
-                        description='Deserunt laborum proident ut nisi consectetur culpa laborum.' 
-                        skills={["React", "Typescript", "MariaDB", "PHP"]}
-                        githubLink='' 
-                    />
-
-                    {/* More to come */}
+                    {/* Shader (Coming soon) */}
                 </VStack>
             </Box>
         </Flex>
