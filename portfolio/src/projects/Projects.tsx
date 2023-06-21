@@ -32,6 +32,7 @@ const Projects : React.FC = () => {
             minH="100vh" 
             pr="12rem" pl="12rem"
             justify="flex-end"
+            overflowX="hidden"
         >
             <MotionBox 
                 ref={ref}
