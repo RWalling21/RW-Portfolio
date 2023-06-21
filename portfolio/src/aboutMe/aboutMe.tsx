@@ -35,11 +35,13 @@ const AboutMe : React.FC = () => {
             </Flex>
 
             <Flex 
-                gridColumn={{base: "1 / span 1", md: "2 / span 1"}} 
+                gridColumn={{base: "1 / span 1", md: "1 / span 2"}}
                 gridRow={{base: "3 / span 1", md: "2 / span 1"}}
                 maxW = "33vw" 
                 justifySelf="center" 
                 direction="column"
+                alignItems="center"
+                mt="1rem"
             >
                 <Text fontSize="5xl" color="lightBlue.headline" textAlign="center" mb="1rem"> Skills </Text>
                 <HStack display="flex" flexWrap="wrap" justifyContent="center" spacing={4}>
