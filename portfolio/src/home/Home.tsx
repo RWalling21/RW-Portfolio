@@ -1,16 +1,11 @@
 import React from 'react';
 import { Flex, Box, Image, Text, VStack, Button } from '@chakra-ui/react';
-import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 
 const MotionStack = motion(VStack);
 const MotionBox = motion(Box)
 
 const Home : React.FC = () => {
-    const [ref, inView] = useInView({
-        triggerOnce: true, // Change the trigger option here
-    });
-
     return (
         <Flex
             bg="navy.background" 
@@ -20,7 +15,6 @@ const Home : React.FC = () => {
             justify="center"
         >
             <MotionStack 
-                ref={ref}
                 align="start"
                 spacing={4}
                 flex="1"
