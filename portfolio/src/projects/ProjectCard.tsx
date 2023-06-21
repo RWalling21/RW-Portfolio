@@ -18,7 +18,7 @@ const ProjectCard: React.FC<ProjectProps> = ({ title, imageSrc, description, ski
         whileHover={{ 
             scale: 1.05, 
             cursor: "pointer",
-            boxShadow: "0px 0px 8px 2px rgba(0, 0, 0, 0.2)" 
+            boxShadow: "0px 0px 8px white"
         }}
         transition={{ duration: 0.3 }}
         bg={"lightBlue.cardBackground"} 
