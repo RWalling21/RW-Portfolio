@@ -53,7 +53,7 @@ const Home : React.FC = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1 }}
             >
-                <Image fallbackSrc='https://via.placeholder.com/400' maxW="100%" maxH="100%"/>
+                <Image src={`${process.env.PUBLIC_URL}/selfie.jpeg`} maxW="100%" maxH="100%" borderRadius="lg"/>
             </MotionBox>
 
         </Flex>

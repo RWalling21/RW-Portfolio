@@ -46,7 +46,7 @@ const AboutMe : React.FC = () => {
                 animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 200 }}
                 transition={{ duration: 1.5 }}
             >
-                <Image src="" fallbackSrc='https://via.placeholder.com/150' mr="1rem" borderRadius="full" />
+                <Image src={`${process.env.PUBLIC_URL}/close-selfie.jpeg`} borderRadius="full" maxW="40vw" maxH="40vh" />
             </MotionFlex>
 
             <MotionFlex 
