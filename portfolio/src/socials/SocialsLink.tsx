@@ -1,19 +1,25 @@
 import React from "react";
 
 import { IconButton, Link } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 interface SocialsProps {
     href: string,
-    icon: any // The IconType type is not working for some reason
+    icon: any, // The IconType type is not working for some reason
+    animOrder: number
 }
 
-const SocialsLink : React.FC<SocialsProps> = ({href, icon}) => {
+const MotionButton = motion(IconButton);
 
-    // Need to be styled
+const SocialsLink : React.FC<SocialsProps> = ({href, icon, animOrder}) => {
+    const variants = {
+        hidden: { opacity: 0, x: -50 },
+        visible: { opacity: 1, x: 0 }
+    };
 
     return (
         <Link href={href} isExternal>
-            <IconButton 
+            <MotionButton 
                 aria-label="LinkedIn" 
                 icon={icon} 
                 size="md"
@@ -23,6 +29,10 @@ const SocialsLink : React.FC<SocialsProps> = ({href, icon}) => {
                 borderWidth="1px"
                 borderColor="navy.background"
                 boxShadow="0px 0px 3px black"
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 0.5, delay: 0.2 * animOrder }}
+                variants={variants}
             />
         </Link>
     )
