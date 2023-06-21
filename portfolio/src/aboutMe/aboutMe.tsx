@@ -2,7 +2,7 @@ import React from 'react';
 import { Flex, Box, Text, HStack, Image, Grid } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import SkillButton from './SkillButton';
+import Skill from './Skill';
 
 const MotionBox = motion(Box);
 const MotionFlex = motion(Flex);
@@ -62,15 +62,15 @@ const AboutMe : React.FC = () => {
             >
                 <Text fontSize="5xl" color="lightBlue.headline" textAlign="center" mb="1rem"> Skills </Text>
                 <HStack display="flex" flexWrap="wrap" justifyContent="center" spacing={6}>
-                    <SkillButton> Java </SkillButton>
-                    <SkillButton> Javascript </SkillButton>
-                    <SkillButton> Typescript </SkillButton>
-                    <SkillButton> Python </SkillButton>
-                    <SkillButton> C++ </SkillButton>
-                    <SkillButton> React </SkillButton>
-                    <SkillButton> Node.JS </SkillButton>
-                    <SkillButton> MariaDB </SkillButton>
-                    <SkillButton> Docker </SkillButton>
+                    <Skill> Java </Skill>
+                    <Skill> Javascript </Skill>
+                    <Skill> Typescript </Skill>
+                    <Skill> Python </Skill>
+                    <Skill> C++ </Skill>
+                    <Skill> React </Skill>
+                    <Skill> Node.JS </Skill>
+                    <Skill> MariaDB </Skill>
+                    <Skill> Docker </Skill>
                 </HStack>
             </MotionFlex>
         </Grid>
