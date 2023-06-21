@@ -1,9 +1,14 @@
 import { Box, Button, Flex, Text } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import React from 'react';
 
-const ContactMe : React.FC = () => {
+const MotionBox = motion(Box);
 
-    // Boring! Let's make this page more interesting.
+const ContactMe : React.FC = () => {
+    const [ref, inView] = useInView({
+        triggerOnce: true, // Change the trigger option here
+    });
 
     return (
         <Flex
@@ -13,7 +18,13 @@ const ContactMe : React.FC = () => {
             align="center"
             justify="center"
         >
-            <Box textAlign="center" color="lightBlue.paragraph">
+            <MotionBox 
+                ref={ref}
+                textAlign="center" 
+                color="lightBlue.paragraph"
+                animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
+                transition={{ duration: 1 }}
+            >
                 <Text fontSize="5xl" color="elements.headline"> Contact me </Text>
 
                 <Text maxW="40vw" size="lg" fontWeight="bold" mt="1rem"> 
@@ -31,7 +42,7 @@ const ContactMe : React.FC = () => {
                 > 
                     Email Me     
                 </Button>
-            </Box>
+            </MotionBox>
         </Flex>
     )
 }
