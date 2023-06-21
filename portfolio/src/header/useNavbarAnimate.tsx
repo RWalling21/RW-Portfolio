@@ -40,7 +40,7 @@ const useNavbarAnimate = () => {
         bg: isScrolled ? "navy.background" : "transparent",
         top: "0", zIndex: "1", width: "full",
         boxShadow: scrollY < 0 ? "0px 4px 20px rgba(0,0,0,0.1)" : "none",
-        opacity: isScrolled ? 0.9 : 1
+        opacity: isScrolled ? 0.98 : 1
     };
 
     return { isVisible, motionProps };
