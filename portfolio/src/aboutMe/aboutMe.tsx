@@ -1,81 +1,73 @@
 import React from 'react';
-import { Flex, Box, Text, HStack, Image, Grid } from '@chakra-ui/react';
+import { Box, Text, Image, VStack, HStack } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import Skill from './Skill';
+import SkillBar from './SkillBar';
 
 const MotionBox = motion(Box);
-const MotionFlex = motion(Flex);
+const MotionVStack = motion(VStack);
+const MotionHStack = motion(HStack);
 
 const AboutMe : React.FC = () => {
     const [ref, inView] = useInView({
-        triggerOnce: true, // Change the trigger option here
+        triggerOnce: true,
     });
 
     return (
-        <Grid
-            templateColumns={{base: "1fr", md: "repeat(2, 1fr)"}}
-            templateRows={{base: "repeat(3, auto)", md: "repeat(2, auto)"}} 
-            gap={6}
-            bg="lightBlue.background" 
-            minH="100vh" 
-            pr="12rem" pl="12rem"
+        <HStack
+            spacing={6}
+            bg="lightBlue.background"
+            minH="125vh"
+            pr="12rem"
+            pl="12rem"
+            alignItems="start"
             justifyContent="center"
         >
-            <MotionBox 
+            <MotionVStack
                 ref={ref}
-                gridColumn={{base: "1 / span 1", md: "1 / span 1"}} 
-                gridRow={{base: "1 / span 1", md: "1 / span 2"}} 
-                maxW = "33vw" 
+                maxW="33vw"
                 mt="4rem"
                 animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -200 }}
                 transition={{ duration: 1.5 }}
+                spacing={6}
             >
-                <Text fontSize="5xl" color="lightBlue.headline" textAlign="center" mb="1rem"> Who am I? </Text>
-                <Text fontSize="lg" color="lightBlue.paragraph" textAlign="center" maxW="40vw"> 
-                    I'm a second-year Software Engineering student at the Rochester Institute of Technology (RIT).
-                    I'm deeply passionate about developing software solutions that make a difference. My technical journey began with Python and has
-                    since expanded to a wide range of languages and tools, from JavaScript, Java, and C++ to React, Angular, and NodeJS.
-                </Text>
-            </MotionBox>
-            
-            <MotionFlex 
-                gridColumn={{base: "1 / span 1", md: "2 / span 1"}} 
-                gridRow="1 / span 1" 
-                maxW = "33vw" 
-                mt="4rem"
-                justifyContent="center"
-                animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 200 }}
-                transition={{ duration: 1.5 }}
-            >
-                <Image src={`${process.env.PUBLIC_URL}/close-selfie.jpeg`} borderRadius="full" maxW="40vw" maxH="40vh" />
-            </MotionFlex>
+                <Box>
+                    <Text fontSize="5xl" color="lightBlue.headline" textAlign="center" mb="1rem">Who am I?</Text>
+                    <Image src={`${process.env.PUBLIC_URL}/close-selfie.jpeg`} borderRadius="full" maxW="40vw" maxH="40vh" />
+                </Box>
+                <Box>
+                    <Text fontSize="lg" color="lightBlue.paragraph" textAlign="center" maxW="40vw">
+                        I'm a second-year Software Engineering student at the Rochester Institute of Technology (RIT).
+                        I'm deeply passionate about developing software solutions that make a difference. My technical journey began with Python and has
+                        since expanded to a wide range of languages and tools, from JavaScript, Java, and C++ to React, Angular, and NodeJS.
+                    </Text>
+                </Box>
+            </MotionVStack>
 
-            <MotionFlex 
-                gridColumn={{base: "1 / span 1", md: "1 / span 2"}}
-                gridRow={{base: "3 / span 1", md: "2 / span 1"}}
-                maxW = "33vw" 
-                justifySelf="center" 
+            <MotionBox
+                maxW="33vw"
+                mt="4rem"
                 direction="column"
                 alignItems="center"
-                mt="1rem"
                 animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }}
                 transition={{ duration: 1.5 }}
+                spacing={4}
             >
-                <Text fontSize="5xl" color="lightBlue.headline" textAlign="center" mb="1rem"> Skills </Text>
-                <HStack display="flex" flexWrap="wrap" justifyContent="center" spacing={6}>
-                    <Skill> Java </Skill>
-                    <Skill> Javascript </Skill>
-                    <Skill> Typescript </Skill>
-                    <Skill> Python </Skill>
-                    <Skill> C++ </Skill>
-                    <Skill> React </Skill>
-                    <Skill> Node.JS </Skill>
-                    <Skill> MariaDB </Skill>
-                    <Skill> Docker </Skill>
-                </HStack>
-            </MotionFlex>
-        </Grid>
+                <Text fontSize="5xl" color="lightBlue.headline" textAlign="center" mb="1rem">Skills</Text>
+
+                <VStack display="flex" flexWrap="wrap" alignItems="center" spacing={1}>
+                    <SkillBar skill='Java' proficiency={85} />
+                    <SkillBar skill='Javascript' proficiency={75} />
+                    <SkillBar skill='Typescript' proficiency={70} />
+                    <SkillBar skill='Python' proficiency={90} />
+                    <SkillBar skill='C++' proficiency={80} />
+                    <SkillBar skill='React' proficiency={75} />
+                    <SkillBar skill='Node.JS' proficiency={80} />
+                    <SkillBar skill='MariaDB' proficiency={70} />
+                    <SkillBar skill='Docker' proficiency={65} />
+                </VStack>
+            </MotionBox>
+        </HStack>
     )
 }
 

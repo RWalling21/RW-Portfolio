@@ -89,7 +89,7 @@ const Projects : React.FC = () => {
 
                     <motion.div variants={cardVariants}>
                         <ProjectCard 
-                            title="Portfolio" 
+                            title="Portfolio Website" 
                             imageSrc="" 
                             description='Deserunt laborum proident ut nisi consectetur culpa laborum.' 
                             skills={["React", "Chakra UI", "TypeScript"]}
