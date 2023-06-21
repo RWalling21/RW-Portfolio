@@ -10,7 +10,7 @@ const MotionFlex = motion(Flex);
 const AboutMe : React.FC = () => {
     const [ref, inView] = useInView({
         triggerOnce: true, // Change the trigger option here
-      });
+    });
 
     return (
         <Grid
@@ -29,7 +29,7 @@ const AboutMe : React.FC = () => {
                 maxW = "33vw" 
                 mt="4rem"
                 animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -200 }}
-                transition={{ duration: 2 }}
+                transition={{ duration: 1.5 }}
             >
                 <Text fontSize="5xl" color="lightBlue.headline" textAlign="center" mb="1rem"> Who am I? </Text>
                 <Text fontSize="lg" color="lightBlue.paragraph" textAlign="center" maxW="40vw"> 
@@ -44,7 +44,7 @@ const AboutMe : React.FC = () => {
                 mt="4rem"
                 justifyContent="center"
                 animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 200 }}
-                transition={{ duration: 2 }}
+                transition={{ duration: 1.5 }}
             >
                 <Image src="" fallbackSrc='https://via.placeholder.com/150' mr="1rem" borderRadius="full" />
             </MotionFlex>
@@ -58,7 +58,7 @@ const AboutMe : React.FC = () => {
                 alignItems="center"
                 mt="1rem"
                 animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }}
-                transition={{ duration: 2 }}
+                transition={{ duration: 1.5 }}
             >
                 <Text fontSize="5xl" color="lightBlue.headline" textAlign="center" mb="1rem"> Skills </Text>
                 <HStack display="flex" flexWrap="wrap" justifyContent="center" spacing={6}>
