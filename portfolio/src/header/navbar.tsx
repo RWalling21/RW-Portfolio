@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stack, Flex, Text, Button, Image, useColorModeValue } from "@chakra-ui/react";
+import { Stack, Flex, Text, Button, Image, Box, useColorModeValue } from "@chakra-ui/react";
 import NavButton from './NavButton';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -18,33 +18,32 @@ const Navbar : React.FC = () => {
         setLastScrollTop(currPos.y);
     }, [lastScrollTop]);
 
-    const navBackground = useColorModeValue("rgb(35, 41, 70)", "rgb(35, 41, 70)"); 
     const isScrolled = scrollY <= 0; 
     
     return (
         <AnimatePresence>
             {isVisible && (
                 <MotionFlex
-                    initial={{ y: -100 }}
+                    initial={{ y: -125 }}
                     animate={{ y: 0 }}
-                    exit={{ y: -100 }}
-                    transition={{ type: 'tween', ease: 'anticipate', duration: 0.5 }}
-                    as="nav"
+                    exit={{ y: -125 }}
+                    transition={{ type: 'tween', duration: 0.2 }}
                     align="center"
                     justify="space-between"
                     wrap="wrap"
-                    pl="4rem" pr="4rem" pt="1rem" pb="2rem"
-                    bg={isScrolled ? navBackground : "transparent"} 
-                    color="white"
+                    pl="4rem" pr="4rem" pt="1rem" pb="1rem"
+                    backdropFilter='auto' backdropBlur='lg'
+                    bg={isScrolled ? "navy.background" : "transparent"} 
+                    color="navy.headline"
                     position="fixed"
                     top="0"
                     zIndex="1"
                     width="full"
                     boxShadow={scrollY < 0 ? "0px 4px 20px rgba(0,0,0,0.1)" : "none"} 
-                    backdropFilter="blur(10px)" 
+                    opacity={isScrolled ? 0.9 : 1}
                 >
                     <Flex align="center">
-                        <Image src="logo.png" fallbackSrc='https://via.placeholder.com/75' mr="1rem" />
+                        <Image src="" fallbackSrc='https://via.placeholder.com/75' mr="1rem" />
                         <Text fontSize="2xl"> Robert Walling </Text>
                     </Flex>
 
