@@ -21,7 +21,7 @@ const Navbar : React.FC = () => {
                             mr="1rem" 
                             maxW="50px" maxH="50px" 
                         />
-                        <Text fontSize="2xl"> Robert Walling </Text>
+                        <Text fontSize="3xl" color={"navy.highlight"}> Robert Walling </Text>
                     </Flex>
 
                     <Stack spacing={8} direction='row' align='center'>
@@ -43,9 +43,10 @@ const Navbar : React.FC = () => {
 
                         <Button 
                             variant="outline" 
-                            color="navy.button"
-                            borderColor="navy.button"
-                            _hover={{ bg: "navy.button", color: "navy.buttonText" 
+                            color="navy.buttonHover"
+                            borderColor="navy.buttonHover"
+                            _hover={{ 
+                                bg: "navy.button", color: "navy.buttonText", borderColor: "navy.button"
                         }}> 
                             Resume
                         </Button>
