@@ -16,7 +16,7 @@ const Navbar : React.FC = () => {
             {isVisible && (
                 <MotionFlex {...motionProps}>
                     <Flex align="center">
-                        <Image src="" fallbackSrc='https://via.placeholder.com/50' mr="1rem" />
+                        <Image src={`${process.env.PUBLIC_URL}/r-logo-low.png`} fallbackSrc='https://via.placeholder.com/50' mr="1rem" maxW="50px" maxH="50px" />
                         <Text fontSize="2xl"> Robert Walling </Text>
                     </Flex>
 
