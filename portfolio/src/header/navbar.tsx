@@ -2,6 +2,7 @@ import React from 'react';
 import { Stack, Flex, Text, Button, Image } from "@chakra-ui/react";
 import NavButton from './NavButton';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-scroll';
 
 import useNavbarAnimate from './useNavbarAnimate';
 
@@ -20,10 +21,22 @@ const Navbar : React.FC = () => {
                     </Flex>
 
                     <Stack spacing={8} direction='row' align='center'>
-                        <NavButton text="Home" section="Home" />
-                        <NavButton text="About Me" section="AboutMe" />
-                        <NavButton text="Projects" section="Projects" />
-                        <NavButton text="Contact Me" section="ContactMe" />
+                        <Link to="Home" smooth={true} duration={500}>
+                            <NavButton text="Home" />
+                        </Link>
+
+                        <Link to="AboutMe" smooth={true} duration={500}>
+                            <NavButton text="About Me" />
+                        </Link>
+
+                        <Link to="Projects" smooth={true} duration={500}>
+                            <NavButton text="Projects" />
+                        </Link>
+
+                        <Link to="ContactMe" smooth={true} duration={500}>
+                            <NavButton text="Contact Me" />
+                        </Link>
+
                         <Button 
                             variant="outline" 
                             color="navy.button"
@@ -32,6 +45,7 @@ const Navbar : React.FC = () => {
                         }}> 
                             Resume
                         </Button>
+
                     </Stack>
                 </MotionFlex>
             )}

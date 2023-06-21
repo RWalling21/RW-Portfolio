@@ -48,8 +48,10 @@
   "devDependencies": {
     "@chakra-ui/icons": "^2.0.19",
     "@n8tb1t/use-scroll-position": "^2.0.3",
+    "@types/react-scroll": "^1.8.7",
     "framer-motion": "^10.12.16",
     "react-icons": "^4.9.0",
-    "react-intersection-observer": "^9.5.1"
+    "react-intersection-observer": "^9.5.1",
+    "react-scroll": "^1.8.9"
   }
 }

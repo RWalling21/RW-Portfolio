@@ -3,14 +3,12 @@ import { Button } from "@chakra-ui/react";
 
 interface NavButtonProps {
     text: string;
-    section: string;
 }
 
-const NavButton : React.FC<NavButtonProps> = ({ text, section }) => {    
+const NavButton : React.FC<NavButtonProps> = ({ text }) => {    
     return (
         <Button 
             as="a"
-            href={`#${section}`}
             bg="navy.button" 
             color="navy.buttonText"
             size='md'
