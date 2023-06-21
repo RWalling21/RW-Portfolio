@@ -25,6 +25,9 @@ const ContactMe : React.FC = () => {
                     color="navy.buttonColor"
                     mt="2rem"
                     justifySelf="flex-end"
+                    _hover={{ bg: "navy.buttonHover" }}
+                    borderWidth="1px"
+                    borderColor={"navy.background"}
                 > 
                     Email Me     
                 </Button>
