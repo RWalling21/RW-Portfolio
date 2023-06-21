@@ -7,7 +7,7 @@ const Home : React.FC = () => {
       bg="navy.background" 
       height="80vh" 
       pr="12rem" pl="12rem"
-      mt="4rem"
+      mt="12rem"
       justify="center"
     >
       <VStack 
