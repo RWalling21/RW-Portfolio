@@ -1,5 +1,6 @@
 import React from 'react';
-import { Flex, Box, Text, Button, HStack, Image, Grid } from '@chakra-ui/react';
+import { Flex, Box, Text, HStack, Image, Grid } from '@chakra-ui/react';
+import SkillButton from './SkillButton';
 
 const AboutMe : React.FC = () => {
     return (
@@ -44,16 +45,16 @@ const AboutMe : React.FC = () => {
                 mt="1rem"
             >
                 <Text fontSize="5xl" color="lightBlue.headline" textAlign="center" mb="1rem"> Skills </Text>
-                <HStack display="flex" flexWrap="wrap" justifyContent="center" spacing={4}>
-                    <Button> Java </Button>
-                    <Button> Javascript </Button>
-                    <Button> Typescript </Button>
-                    <Button> Python </Button>
-                    <Button> C++ </Button>
-                    <Button> React </Button>
-                    <Button> Node.JS </Button>
-                    <Button> MariaDB </Button>
-                    <Button> Docker </Button>
+                <HStack display="flex" flexWrap="wrap" justifyContent="center" spacing={6}>
+                    <SkillButton> Java </SkillButton>
+                    <SkillButton> Javascript </SkillButton>
+                    <SkillButton> Typescript </SkillButton>
+                    <SkillButton> Python </SkillButton>
+                    <SkillButton> C++ </SkillButton>
+                    <SkillButton> React </SkillButton>
+                    <SkillButton> Node.JS </SkillButton>
+                    <SkillButton> MariaDB </SkillButton>
+                    <SkillButton> Docker </SkillButton>
                 </HStack>
             </Flex>
         </Grid>
