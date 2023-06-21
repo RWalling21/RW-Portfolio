@@ -16,7 +16,13 @@ const AboutMe : React.FC = () => {
                     Simple bulleted list of some places I've worked 
                     Add some interesting geometry to the background
                 */}
-    
+
+                <Text fontSize="xl"> Skills </Text>
+                {/* 
+                    Some sort of interesting graph to show where my skills lie
+                    might be a cool implementation of three?
+                */}
+
                 <Text fontSize="xl"> Books that have influenced me </Text>
                 {/* 
                     I want a carousel that swipes through the books, or a custom 

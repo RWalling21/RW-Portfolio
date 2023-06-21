@@ -15,7 +15,8 @@ const Home : React.FC = () => {
         spacing={4}
         flex="1"
         maxW="600px"
-        mr="2rem"
+        mr="2.5rem"
+        mt="2.5rem"
       >
         <Text color="navy.headline" fontSize="5xl">
           Hello there! I'm Robert

@@ -19,7 +19,7 @@ const SocialsLink : React.FC<SocialsProps> = ({href, icon}) => {
                 size="md"
                 isRound={true}
                 bg="navy.button"
-                _hover={{ bg: "navy.buttonHover", boxShadow: "0px 0px 6px white" }}
+                _hover={{ bg: "navy.buttonHover", boxShadow: "0px 0px 5px white" }}
                 borderWidth="1px"
                 borderColor="navy.background"
                 boxShadow="0px 0px 3px black"

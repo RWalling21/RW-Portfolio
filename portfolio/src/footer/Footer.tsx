@@ -10,15 +10,16 @@ const Footer: React.FC = () => {
             justify="center"
             align="flex-end"
             mb="1rem"
+
         >
             <Text 
                 fontSize="md" 
-                color="navy.paragraph" 
+                color="navy.paragraph"
+                textAlign="center"
             > 
-                Designed and Engineered by Robert Walling.    
+                Designed and Engineered by Robert Walling. <br/>
+                rhw8246@rit.edu
             </Text>
-
-            {/* Add Links to relevant social media */}
         </Flex>
     )
 };

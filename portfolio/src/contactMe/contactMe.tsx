@@ -17,7 +17,7 @@ const ContactMe : React.FC = () => {
                 <Text fontSize="5xl" color="elements.headline"> Contact me </Text>
 
                 <Text maxW="40vw" size="lg" fontWeight="bold" mt="1rem"> 
-                    I'm always looking for new and exciting projects to work on, please don't hesitate to reach out!  
+                    I'm always looking for new and exciting projects to work on, please don't hesitate to reach out at rhw8246@rit.edu!  
                 </Text>
 
                 <Button
