@@ -8,7 +8,7 @@ const AboutMe : React.FC = () => {
             templateColumns={{ base: "1fr", md: "1fr 1fr" }} 
             gap={6}
             bg="lightBlue.background" 
-            height="125vh" 
+            minH="100vh" 
             pr="12rem" pl="12rem"
         >
             <Box maxW="33vw" mt="4rem">

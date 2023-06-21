@@ -5,7 +5,7 @@ const Home : React.FC = () => {
   return (
     <Flex
       bg="navy.background" 
-      height="80vh" 
+      minH="80vh" 
       pr="12rem" pl="12rem"
       mt="12rem"
       justify="center"

@@ -10,7 +10,7 @@ const Projects : React.FC = () => {
         <Flex 
             mt="4rem"
             bg="navy.background" 
-            height="125vh" 
+            minH="100vh" 
             pr="12rem" pl="12rem"
             justify="flex-end"
         >
