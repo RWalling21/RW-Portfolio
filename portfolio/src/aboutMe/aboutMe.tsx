@@ -6,7 +6,7 @@ const AboutMe : React.FC = () => {
         <Flex
             bg="lightBlue.background" 
             height="125vh" 
-            pr="4rem" pl="4rem"
+            pr="12rem" pl="12rem"
         >
             <Box mt="4rem">
                 <Text fontSize="4xl" color="lightBlue.headline"> About Me </Text>

@@ -15,6 +15,7 @@ const NavButton : React.FC<NavButtonProps> = ({ text, section }) => {
             color="navy.buttonText"
             size='md'
             variant='contained'
+            _hover={{ bg: "navy.buttonHover" }}
         >
             { text }
         </Button>

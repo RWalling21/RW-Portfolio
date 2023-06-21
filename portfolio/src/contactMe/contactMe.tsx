@@ -9,7 +9,7 @@ const ContactMe : React.FC = () => {
         <Flex
             bg="lightBlue.background" 
             height="75vh" 
-            pr="4rem" pl="4rem"
+            pr="12rem" pl="12rem"
             align="center"
             justify="center"
         >

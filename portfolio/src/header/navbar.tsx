@@ -27,7 +27,7 @@ const Navbar : React.FC = () => {
                 <NavButton text="About Me" section="AboutMe" />
                 <NavButton text="Projects" section="Projects" />
                 <NavButton text="Contact Me" section="ContactMe" />
-                <Button variant="outline" color="navy.button"> Resume </Button>
+                <Button variant="outline" color="navy.button" > Resume </Button>
             </Stack>
         </Flex>
     );

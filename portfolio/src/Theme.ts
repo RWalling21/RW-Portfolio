@@ -8,6 +8,7 @@ const Theme = extendTheme({
       paragraph: "#b8c1ec",
       button: "#eebbc3",
       buttonText: "#232946",
+      buttonHover: "#d4d8f0"
     },
     lightBlue: {
       background: "#d4d8f0",

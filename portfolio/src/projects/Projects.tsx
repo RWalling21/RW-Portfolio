@@ -11,7 +11,7 @@ const Projects : React.FC = () => {
             mt="4rem"
             bg="navy.background" 
             height="125vh" 
-            pr="4rem" pl="4rem"
+            pr="12rem" pl="12rem"
             justify="flex-end"
         >
             <Box flex="1" color="navy.paragraph" mt="14rem">

@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
         <Flex
             bg="navy.background" 
             height="10vh" 
-            pr="4rem" pl="4rem"
+            pr="12rem" pl="12rem"
             justify="center"
             align="flex-end"
             mb="1rem"

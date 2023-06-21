@@ -6,7 +6,7 @@ const Home : React.FC = () => {
     <Flex
       bg="navy.background" 
       height="75vh" 
-      pr="4rem" pl="4rem"
+      pr="12rem" pl="12rem"
       mt="4rem"
       justify="center"
     >
@@ -32,6 +32,7 @@ const Home : React.FC = () => {
           size="lg"
           bg="navy.button"
           variant='contained'
+          _hover={{ bg: "navy.buttonHover" }}
         > 
           Grab my Resume! 
         </Button>
