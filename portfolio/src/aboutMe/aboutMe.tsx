@@ -33,7 +33,9 @@ const AboutMe : React.FC = () => {
             >
                 <Text fontSize="5xl" color="lightBlue.headline" textAlign="center" mb="1rem"> Who am I? </Text>
                 <Text fontSize="lg" color="lightBlue.paragraph" textAlign="center" maxW="40vw"> 
-                    Nostrud duis dolore est irure magna voluptate occaecat duis esse. Do velit eiusmod eu aute anim minim do sint voluptate proident ad. Id irure irure occaecat sit exercitation. Aliquip eu est tempor in minim. Adipisicing consectetur est officia do amet cupidatat.
+                    I'm a second-year Software Engineering student at the Rochester Institute of Technology (RIT).
+                    I'm deeply passionate about developing software solutions that make a difference. My technical journey began with Python and has
+                    since expanded to a wide range of languages and tools, from JavaScript, Java, and C++ to React, Angular, and NodeJS.
                 </Text>
             </MotionBox>
             

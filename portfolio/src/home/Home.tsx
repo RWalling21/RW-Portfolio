@@ -25,13 +25,12 @@ const Home : React.FC = () => {
                 transition={{ duration: 1 }}
             >
                 <Text color="navy.headline" fontSize="5xl">
-                    Hello there! I'm Robert
+                    Hello! I'm Robert
                 </Text>
 
-                <Text color="navy.paragraph" fontSize="lg">
-                    I'm a second-year Software Engineering student at the Rochester Institute of Technology (RIT).
-                    I'm deeply passionate about developing software solutions that make a difference. My technical journey began with Python and has
-                    since expanded to a wide range of languages and tools, from JavaScript, Java, and C++ to React, Angular, and NodeJS.
+                <Text color="navy.paragraph" fontSize="2xl">
+                    Full Stack Software Engineer, musician, and creative.
+                    Leveraging a diverse technical background to create scalable, user-focused solutions. 
                 </Text>
 
                 <Button 
