@@ -25,8 +25,8 @@ const Home : React.FC = () => {
                 <MotionText 
                     color="navy.headline" 
                     fontSize="6xl"
-                    initial={{ opacity: 0, y: -200 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, transform: 'translateY(-200px)' }}
+                    animate={{ opacity: 1, transform: 'translateY(0)' }}
                     transition={{ duration: 1 }}
                 >
                     Hello! I'm Robert
@@ -35,8 +35,8 @@ const Home : React.FC = () => {
                 <MotionText 
                     color="navy.paragraph" 
                     fontSize="2xl"
-                    initial={{ opacity: 0, x: -200 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, transform: 'translateX(-200px)' }}
+                    animate={{ opacity: 1, transform: 'translateX(0)' }}
                     transition={{ duration: 1 }}
                 >
                     Full Stack Software Engineer, Musician, and Creative. {/* Somehow make this stick out more */}
@@ -48,20 +48,19 @@ const Home : React.FC = () => {
                     bg="navy.button"
                     variant='contained'
                     _hover={{ bg: "navy.buttonHover" }}
-                    initial={{ opacity: 0, y: 200 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, transform: 'translateY(200px)' }}
+                    animate={{ opacity: 1, transform: 'translateY(0)' }}
                     transition={{ duration: 1 }}
                 > 
                     Grab my Resume! 
                 </MotionButton>
             </VStack>
-
             <MotionBox 
                 maxW="400px" 
                 maxH="400px" 
                 flex="2"
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, transform: 'scale(0)' }}
+                animate={{ opacity: 1, transform: 'scale(1)' }}
                 transition={{ duration: 1 }}
             >
                 <Image src={`${process.env.PUBLIC_URL}/selfie.jpeg`} maxW="100%" maxH="100%" borderRadius="lg"/>
