@@ -88,7 +88,7 @@ const Projects : React.FC = () => {
                             imageSrc={`${process.env.PUBLIC_URL}/its-logo.png`}
                             description='Created a React Web App used internally by RIT ITS to manage and track employee details. Connected to REST API to fetch and update data.' 
                             skills={["React", "Typescript", "MariaDB", "PHP", "REST-API", "Playwright"]}
-                            githubLink='' 
+                            githubLink='https://github.com/RWalling21/' 
                         />
                     </motion.div>
 
@@ -98,7 +98,7 @@ const Projects : React.FC = () => {
                             imageSrc={`${process.env.PUBLIC_URL}/comics.jpg`}
                             description='Applied Object Oriented Design Patterns to create a Java application that allows users to create and manage a collection of comic books.' 
                             skills={["Design Patterns", "UML", "Java", "OOP"]}
-                            githubLink='' 
+                            githubLink='https://github.com/RWalling21/' 
                         />
                     </motion.div>
                 </MotionStack>
