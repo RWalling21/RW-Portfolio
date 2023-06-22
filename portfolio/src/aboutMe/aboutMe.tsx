@@ -25,7 +25,7 @@ const AboutMe : React.FC = () => {
                 maxW="33vw"
                 mt="4rem"
                 animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -200 }}
-                transition={{ duration: 1.5 }}
+                transition={{ duration: 1 }}
                 spacing={6}
             >
                 <Box>
@@ -50,13 +50,13 @@ const AboutMe : React.FC = () => {
                 <Text fontSize="5xl" color="lightBlue.paragraph" textAlign="center" mb="1rem"> Skills </Text>
 
                 <MotionVStack 
-                    ref-={ref}
+                    ref={ref}
                     display="flex" 
                     flexWrap="wrap" 
                     alignItems="center" 
                     spacing={2}
-                    animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.25 }}
-                    transition={{ staggerChildren: 0.5, duration: 1 }}
+                    animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
+                    transition={{ duration: 1 }}
                 >
                     <SkillBar skill='Java' proficiency={90} />
                     <SkillBar skill='Javascript' proficiency={90} />
