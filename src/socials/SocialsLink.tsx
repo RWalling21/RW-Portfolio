@@ -26,7 +26,11 @@ const SocialsLink : React.FC<SocialsProps> = ({href, icon, animOrder}) => {
                 boxShadow="0px 0px 3px black"
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 * animOrder }}
+                whileHover={{ 
+                    scale: 1.2,
+                    cursor: "pointer",
+                }}
+                transition={{ x: { duration: 0.5, delay: 0.2 * animOrder }, scale: { duration: 0.05 } }}
             />
         </Link>
     )
