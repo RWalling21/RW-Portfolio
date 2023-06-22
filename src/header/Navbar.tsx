@@ -7,6 +7,7 @@ import { Link } from 'react-scroll';
 import useNavbarAnimate from './useNavbarAnimate';
 
 const MotionFlex = motion(Flex);
+const MotionButton = motion(Button);
 
 const Navbar : React.FC = () => {   
     const { isVisible, motionProps } = useNavbarAnimate();
@@ -41,7 +42,7 @@ const Navbar : React.FC = () => {
                             <NavButton text="Contact Me" />
                         </Link>
 
-                        <Button 
+                        <MotionButton 
                             as="a"
                             href={`${process.env.PUBLIC_URL}/resume.pdf`}
                             target="_blank"
@@ -50,9 +51,15 @@ const Navbar : React.FC = () => {
                             borderColor="navy.buttonHover"
                             _hover={{ 
                                 bg: "navy.button", color: "navy.buttonText", borderColor: "navy.button"
-                        }}> 
+                            }}
+                            whileHover={{ 
+                                scale: 1.05,
+                                cursor: "pointer",
+                            }}
+                            transition={{ duration: 0.05 }}
+                            > 
                             Resume
-                        </Button>
+                        </MotionButton>
 
                     </Stack>
                 </MotionFlex>

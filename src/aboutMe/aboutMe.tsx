@@ -34,7 +34,7 @@ const AboutMe : React.FC = () => {
                 </Box>
                 <Box>
                     <Text fontSize="lg" color="lightBlue.paragraph" textAlign="center" maxW="40vw">
-                        I'm a second-year Software Engineering student at the Rochester Institute of Technology (RIT).
+                        I'm a third-year Software Engineering student at the Rochester Institute of Technology (RIT).
                         I'm passionate about creating scalable, user-focused solutions to real-world problems. 
                         I'm able to design and implement full-stack applications using best practices and modern design patterns.
                         I'm also a musician, and I love to create music in my free time.
