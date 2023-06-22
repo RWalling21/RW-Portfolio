@@ -74,11 +74,11 @@ const Projects : React.FC = () => {
                 >
                     <motion.div variants={cardVariants}>
                         <ProjectCard 
-                            title="Comix"
-                            imageSrc="" 
-                            description='Applied Object Oriented Design Patterns to create a Java application that allows users to create and manage a collection of comic books.' 
-                            skills={["Design Patterns", "UML", "Java", "OOP"]}
-                            githubLink='' 
+                            title="Portfolio Website" 
+                            imageSrc={`${process.env.PUBLIC_URL}/portfolio.jpg`}
+                            description='Create a responsive portfolio website using React and Chakra UI. Used Framer Motion to add animations and transitions.' 
+                            skills={["React", "Chakra UI", "TypeScript", "Framer-Motion"]}
+                            githubLink='https://github.com/RWalling21/Rwalling21.github.io' 
                         />
                     </motion.div>
 
@@ -94,14 +94,13 @@ const Projects : React.FC = () => {
 
                     <motion.div variants={cardVariants}>
                         <ProjectCard 
-                            title="Portfolio Website" 
-                            imageSrc="" 
-                            description='Create a responsive portfolio website using React and Chakra UI. Used Framer Motion to add animations and transitions.' 
-                            skills={["React", "Chakra UI", "TypeScript", "Framer-Motion"]}
+                            title="Comix"
+                            imageSrc={`${process.env.PUBLIC_URL}/comics.jpg`}
+                            description='Applied Object Oriented Design Patterns to create a Java application that allows users to create and manage a collection of comic books.' 
+                            skills={["Design Patterns", "UML", "Java", "OOP"]}
                             githubLink='' 
                         />
                     </motion.div>
-
                 </MotionStack>
             </Box>
         </Flex>

@@ -50,6 +50,7 @@ const ProjectCard: React.FC<ProjectProps> = ({ title, imageSrc, description, ski
                 alt={title} 
                 borderRadius="md" 
                 objectFit="cover" 
+                alignSelf="center"
                 fallbackSrc='https://via.placeholder.com/125' 
                 maxW="125" maxH="125"
                 align="center"

@@ -3,7 +3,7 @@ import { Box, Text, Flex } from '@chakra-ui/react';
 
 const SkillBar: React.FC<{ skill: string, proficiency: number }> = ({ skill, proficiency }) => {
     return (
-        <Flex w='75vh' align="center" borderColor="navy.background" borderWidth="1px">
+        <Flex w='75vh' align="center">
 
             {/* Box for Skill naming */}
             <Box w="15vh" bg="navy.button" p="0.5rem">
