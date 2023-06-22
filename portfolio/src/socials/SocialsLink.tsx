@@ -12,11 +12,6 @@ interface SocialsProps {
 const MotionButton = motion(IconButton);
 
 const SocialsLink : React.FC<SocialsProps> = ({href, icon, animOrder}) => {
-    const variants = {
-        hidden: { opacity: 0, x: -50 },
-        visible: { opacity: 1, x: 0 }
-    };
-
     return (
         <Link href={href} isExternal>
             <MotionButton 
@@ -29,10 +24,9 @@ const SocialsLink : React.FC<SocialsProps> = ({href, icon, animOrder}) => {
                 borderWidth="1px"
                 borderColor="navy.background"
                 boxShadow="0px 0px 3px black"
-                initial="hidden"
-                animate="visible"
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 * animOrder }}
-                variants={variants}
             />
         </Link>
     )
