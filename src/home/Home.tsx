@@ -1,74 +1,97 @@
 import React from 'react';
 import { Flex, Box, Image, Text, VStack, Button } from '@chakra-ui/react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
-const MotionBox = motion(Box)
+const MotionBox = motion(Box);
 const MotionText = motion(Text);
 const MotionButton = motion(Button);
 
-const Home : React.FC = () => {
+const textVariants: Variants = {
+    hidden: { opacity: 0, y: -200 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+};
+
+const buttonVariants: Variants = {
+    hidden: { opacity: 0, y: 200 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+};
+
+const imageVariants: Variants = {
+    hidden: { opacity: 0, scale: 0 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
+};
+
+const Home: React.FC = () => {
     return (
         <Flex
-            bg="navy.background" 
-            minH="80vh" 
-            pr="12rem" pl="12rem"
+            bg="navy.background"
+            minH="80vh"
+            pr="12rem"
+            pl="12rem"
             mt="12rem"
             justify="center"
         >
-            <VStack 
+            <VStack
                 align="start"
                 spacing={4}
                 flex="1"
                 maxW="600px"
-                mr="2.5rem" mt="2.5rem"
+                mr="2.5rem"
+                mt="2.5rem"
             >
-                <MotionText 
-                    color="navy.headline" 
+                <MotionText
+                    color="navy.headline"
                     fontSize="6xl"
-                    initial={{ opacity: 0, transform: 'translateY(-200px)' }}
-                    animate={{ opacity: 1, transform: 'translateY(0)' }}
-                    transition={{ duration: 1 }}
+                    variants={textVariants}
+                    initial="hidden"
+                    animate="visible"
                 >
                     Hello! I'm Robert
                 </MotionText>
 
-                <MotionText 
-                    color="navy.paragraph" 
+                <MotionText
+                    color="navy.paragraph"
                     fontSize="2xl"
-                    initial={{ opacity: 0, transform: 'translateX(-200px)' }}
-                    animate={{ opacity: 1, transform: 'translateX(0)' }}
-                    transition={{ duration: 1 }}
+                    variants={textVariants}
+                    initial="hidden"
+                    animate="visible"
                 >
-                    Full Stack Software Engineer, Musician, and Creative. {/* Somehow make this stick out more */}
+                    Full Stack Software Engineer, Musician, and Creative.
                 </MotionText>
 
-                <MotionButton 
+                <MotionButton
                     as="a"
                     href={`${process.env.PUBLIC_URL}/resume.pdf`}
                     target="_blank"
-                    ml="auto" mt="1rem"
+                    ml="auto"
+                    mt="1rem"
                     size="lg"
                     bg="navy.button"
-                    variant='contained'
-                    _hover={{ bg: "navy.buttonHover" }}
-                    initial={{ opacity: 0, transform: 'translateY(200px)' }}
-                    animate={{ opacity: 1, transform: 'translateY(0)' }}
-                    transition={{ duration: 1 }}
-                > 
-                    Grab my Resume! 
+                    variant="contained"
+                    _hover={{ bg: 'navy.buttonHover' }}
+                    variants={buttonVariants}
+                    initial="hidden"
+                    animate="visible"
+                >
+                    Grab my Resume!
                 </MotionButton>
             </VStack>
-            <MotionBox 
-                maxW="400px" 
-                maxH="400px" 
-                flex="2"
-                initial={{ opacity: 0, transform: 'scale(0)' }}
-                animate={{ opacity: 1, transform: 'scale(1)' }}
-                transition={{ duration: 1 }}
-            >
-                <Image src={`${process.env.PUBLIC_URL}/selfie.jpeg`} maxW="100%" maxH="100%" borderRadius="lg"/>
-            </MotionBox>
 
+            <MotionBox
+                maxW="400px"
+                maxH="400px"
+                flex="2"
+                variants={imageVariants}
+                initial="hidden"
+                animate="visible"
+            >
+                <Image
+                    src={`${process.env.PUBLIC_URL}/selfie.jpeg`}
+                    maxW="100%"
+                    maxH="100%"
+                    borderRadius="lg"
+                />
+            </MotionBox>
         </Flex>
     );
 };
