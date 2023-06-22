@@ -85,7 +85,7 @@ const Projects : React.FC = () => {
                     <motion.div variants={cardVariants}>
                         <ProjectCard 
                             title="Technet" 
-                            imageSrc="" 
+                            imageSrc={`${process.env.PUBLIC_URL}/its-logo.png`}
                             description='Created a React Web App used internally by RIT ITS to manage and track employee details. Connected to REST API to fetch and update data.' 
                             skills={["React", "Typescript", "MariaDB", "PHP", "REST-API", "Playwright"]}
                             githubLink='' 
