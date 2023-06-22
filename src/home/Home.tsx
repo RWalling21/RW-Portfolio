@@ -72,6 +72,11 @@ const Home: React.FC = () => {
                     variants={buttonVariants}
                     initial="hidden"
                     animate="visible"
+                    whileHover={{ 
+                        scale: 1.05,
+                        cursor: "pointer",
+                    }}
+                    transition={{ duration: 0.05 }}
                 >
                     Grab my Resume!
                 </MotionButton>

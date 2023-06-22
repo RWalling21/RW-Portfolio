@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import React from 'react';
 
 const MotionBox = motion(Box);
+const MotionButton = motion(Button);
 
 const ContactMe : React.FC = () => {
     const [ref, inView] = useInView({
@@ -31,7 +32,7 @@ const ContactMe : React.FC = () => {
                     I'm always looking for new and exciting projects to work on, please don't hesitate to reach out at rhw8246@rit.edu!  
                 </Text>
 
-                <Button
+                <MotionButton
                     bg="navy.button"
                     color="navy.buttonColor"
                     mt="2rem"
@@ -40,9 +41,14 @@ const ContactMe : React.FC = () => {
                     borderWidth="1px"
                     borderColor={"navy.background"}
                     onClick={() => window.location.href = "mailto:rhw8246@rit.edu"}
+                    whileHover={{ 
+                        scale: 1.05,
+                        cursor: "pointer",
+                    }}
+                    transition={{ duration: 0.05 }}
                 > 
                     Email Me     
-                </Button>
+                </MotionButton>
             </MotionBox>
         </Flex>
     )
