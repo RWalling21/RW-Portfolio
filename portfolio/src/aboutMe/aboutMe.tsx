@@ -54,7 +54,7 @@ const AboutMe : React.FC = () => {
                     display="flex" 
                     flexWrap="wrap" 
                     alignItems="center" 
-                    spacing={1}
+                    spacing={2}
                     animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.25 }}
                     transition={{ staggerChildren: 0.5, duration: 1 }}
                 >
