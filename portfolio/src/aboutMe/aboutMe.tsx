@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import SkillBar from './SkillBar';
 
-const MotionBox = motion(Box);
 const MotionVStack = motion(VStack);
 
 const AboutMe : React.FC = () => {
@@ -43,18 +42,22 @@ const AboutMe : React.FC = () => {
                 </Box>
             </MotionVStack>
 
-            <MotionBox
+            <Box
                 maxW="33vw"
                 mt="4rem"
-                direction="column"
                 alignItems="center"
-                animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 200 }}
-                transition={{ duration: 1.5 }}
-                spacing={4}
             >
                 <Text fontSize="5xl" color="lightBlue.paragraph" textAlign="center" mb="1rem"> Skills </Text>
 
-                <VStack display="flex" flexWrap="wrap" alignItems="center" spacing={1}>
+                <MotionVStack 
+                    ref-={ref}
+                    display="flex" 
+                    flexWrap="wrap" 
+                    alignItems="center" 
+                    spacing={1}
+                    animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.25 }}
+                    transition={{ staggerChildren: 0.5, duration: 1 }}
+                >
                     <SkillBar skill='Java' proficiency={90} />
                     <SkillBar skill='Javascript' proficiency={90} />
                     <SkillBar skill='React' proficiency={85} />
@@ -66,8 +69,8 @@ const AboutMe : React.FC = () => {
                     <SkillBar skill='Node.JS' proficiency={75} />
                     <SkillBar skill='MariaDB' proficiency={70} />
                     <SkillBar skill='Docker' proficiency={65} />
-                </VStack>
-            </MotionBox>
+                </MotionVStack>
+            </Box>
         </HStack>
     )
 }

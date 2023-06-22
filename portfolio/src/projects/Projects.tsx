@@ -42,8 +42,13 @@ const Projects : React.FC = () => {
                 animate={inView ? { opacity: 1, x: 0, transition: { duration: 1 }} : { opacity: 0, x: -200, transition: { duration: 1 }}}
                 transition={{ duration: 1 }}
             >
+                {/* Needs something here to keep attention */}
                 <Text fontSize="lg">
-                    Qui amet do proident ea in minim aliqua ea dolor do qui ea. Ex sint pariatur velit commodo nulla eu consequat. Lorem est eu laboris incididunt reprehenderit adipisicing deserunt consequat laboris laborum. Laboris mollit sint mollit sunt fugiat non labore do minim in aute labore. Cupidatat officia irure anim occaecat culpa. Laborum esse anim quis consequat reprehenderit voluptate ad amet commodo est consectetur. Adipisicing labore ut laboris consectetur laborum cupidatat.
+                    Passionate about innovation and driven by a thirst to improve, I am constantly engaged in the 
+                    design and development of new projects. Every project that I take on is an opportunity to learn something 
+                    new and to grow as a developer. The ever-evolving world of technology demands that developers stay up to date. 
+                    I take immense pride in my work and strive to create applications that are a blend of creativity, efficiency, 
+                    and user experience. 
                 </Text>
             </MotionBox>
             
