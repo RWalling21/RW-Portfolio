@@ -36,8 +36,9 @@ const AboutMe : React.FC = () => {
                 <Box>
                     <Text fontSize="lg" color="lightBlue.paragraph" textAlign="center" maxW="40vw">
                         I'm a second-year Software Engineering student at the Rochester Institute of Technology (RIT).
-                        I'm deeply passionate about developing software solutions that make a difference. My technical journey began with Python and has
-                        since expanded to a wide range of languages and tools, from JavaScript, Java, and C++ to React, Angular, and NodeJS.
+                        I'm passionate about creating scalable, user-focused solutions to real-world problems. 
+                        I'm able to design and implement full-stack applications using best practices and modern design patterns.
+                        I'm also a musician, and I love to create music in my free time.
                     </Text>
                 </Box>
             </MotionVStack>
@@ -51,16 +52,18 @@ const AboutMe : React.FC = () => {
                 transition={{ duration: 1.5 }}
                 spacing={4}
             >
-                <Text fontSize="6xl" color="lightBlue.paragraph" textAlign="center"> Skills </Text>
+                <Text fontSize="5xl" color="lightBlue.paragraph" textAlign="center" mb="1rem"> Skills </Text>
 
                 <VStack display="flex" flexWrap="wrap" alignItems="center" spacing={1}>
-                    <SkillBar skill='Java' proficiency={85} />
-                    <SkillBar skill='Javascript' proficiency={75} />
-                    <SkillBar skill='Typescript' proficiency={70} />
-                    <SkillBar skill='Python' proficiency={90} />
-                    <SkillBar skill='C++' proficiency={80} />
-                    <SkillBar skill='React' proficiency={75} />
-                    <SkillBar skill='Node.JS' proficiency={80} />
+                    <SkillBar skill='Java' proficiency={90} />
+                    <SkillBar skill='Javascript' proficiency={90} />
+                    <SkillBar skill='React' proficiency={85} />
+                    <SkillBar skill='Typescript' proficiency={85} />
+                    <SkillBar skill='UML Design' proficiency={80} />
+                    <SkillBar skill='Python' proficiency={80} />
+                    <SkillBar skill='Angular' proficiency={75} />
+                    <SkillBar skill='C++' proficiency={75} />
+                    <SkillBar skill='Node.JS' proficiency={75} />
                     <SkillBar skill='MariaDB' proficiency={70} />
                     <SkillBar skill='Docker' proficiency={65} />
                 </VStack>

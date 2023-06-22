@@ -2,8 +2,9 @@ import React from 'react';
 import { Flex, Box, Image, Text, VStack, Button } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
-const MotionStack = motion(VStack);
 const MotionBox = motion(Box)
+const MotionText = motion(Text);
+const MotionButton = motion(Button);
 
 const Home : React.FC = () => {
     return (
@@ -14,35 +15,46 @@ const Home : React.FC = () => {
             mt="12rem"
             justify="center"
         >
-            <MotionStack 
+            <VStack 
                 align="start"
                 spacing={4}
                 flex="1"
                 maxW="600px"
                 mr="2.5rem" mt="2.5rem"
-                initial={{ opacity: 0, x: -200 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1 }}
             >
-                <Text color="navy.headline" fontSize="5xl">
+                <MotionText 
+                    color="navy.headline" 
+                    fontSize="6xl"
+                    initial={{ opacity: 0, y: -200 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                >
                     Hello! I'm Robert
-                </Text>
+                </MotionText>
 
-                <Text color="navy.paragraph" fontSize="2xl">
-                    Full Stack Software Engineer, musician, and creative.
-                    Leveraging a diverse technical background to create scalable, user-focused solutions. 
-                </Text>
+                <MotionText 
+                    color="navy.paragraph" 
+                    fontSize="2xl"
+                    initial={{ opacity: 0, x: -200 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1 }}
+                >
+                    Full Stack Software Engineer, Musician, and Creative. {/* Somehow make this stick out more */}
+                </MotionText>
 
-                <Button 
+                <MotionButton 
                     ml="auto" mt="1rem"
                     size="lg"
                     bg="navy.button"
                     variant='contained'
                     _hover={{ bg: "navy.buttonHover" }}
+                    initial={{ opacity: 0, y: 200 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
                 > 
                     Grab my Resume! 
-                </Button>
-            </MotionStack>
+                </MotionButton>
+            </VStack>
 
             <MotionBox 
                 maxW="400px" 
