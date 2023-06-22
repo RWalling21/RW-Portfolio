@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.dddbb533.css",
-    "main.js": "/static/js/main.cfaea050.js",
-    "index.html": "/index.html",
-    "main.dddbb533.css.map": "/static/css/main.dddbb533.css.map",
-    "main.cfaea050.js.map": "/static/js/main.cfaea050.js.map"
+    "main.css": "/Rwalling-Portfolio/static/css/main.dddbb533.css",
+    "main.js": "/Rwalling-Portfolio/static/js/main.2c2925c6.js",
+    "index.html": "/Rwalling-Portfolio/index.html",
+    "main.dddbb533.css.map": "/Rwalling-Portfolio/static/css/main.dddbb533.css.map",
+    "main.2c2925c6.js.map": "/Rwalling-Portfolio/static/js/main.2c2925c6.js.map"
   },
   "entrypoints": [
     "static/css/main.dddbb533.css",
-    "static/js/main.cfaea050.js"
+    "static/js/main.2c2925c6.js"
   ]
 }
