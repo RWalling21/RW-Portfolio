@@ -23,7 +23,7 @@ const ContactMe : React.FC = () => {
                 textAlign="center" 
                 color="lightBlue.paragraph"
                 animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
-                transition={{ duration: 1 }}
+                transition={{ duration: 0.5 }}
             >
                 <Text fontSize="5xl" color="elements.headline"> Contact me </Text>
 

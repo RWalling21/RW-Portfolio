@@ -12,8 +12,9 @@ const SkillBar: React.FC<{ skill: string, proficiency: number }> = ({ skill, pro
 
             {/* Full box for proficiency */}
             <Box w="60vh" flex="1" bg='lightBlue.cardBackground' position="relative">
-                <Box w={`${proficiency}%`} h="100%" p="0.5rem" bg='navy.button' position="absolute" />
-                <Text p="0.5rem" alignSelf="right">{`${proficiency}%`}</Text>
+                {/* It might seem weird that I add a -1, it's to keep the bar away from text */}
+                <Box w={`${proficiency - 1}%`} h="100%" p="0.5rem" bg='navy.button' position="absolute"/>
+                <Text p="0.5rem" textAlign="right">{`${proficiency}%`}</Text>
             </Box>
 
         </Flex>
