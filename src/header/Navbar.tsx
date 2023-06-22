@@ -42,6 +42,9 @@ const Navbar : React.FC = () => {
                         </Link>
 
                         <Button 
+                            as="a"
+                            href={`${process.env.PUBLIC_URL}/resume.pdf`}
+                            target="_blank"
                             variant="outline" 
                             color="navy.buttonHover"
                             borderColor="navy.buttonHover"
