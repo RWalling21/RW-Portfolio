@@ -65,7 +65,7 @@ const ProjectCard: React.FC<ProjectProps> = ({ title, imageSrc, description, ski
                 {description}
             </Text>
             
-            <HStack display="flex" flexWrap="wrap" mt="0.5rem" mb="0.5rem" spacing={2}>
+            <HStack display="flex" flexWrap="wrap" mt="0.5rem" mb="0.5rem" spacing={2} >
                 {skills.map((skill : string) => (
                     <SkillButton key={skill}> {skill} </SkillButton>
                 ))}

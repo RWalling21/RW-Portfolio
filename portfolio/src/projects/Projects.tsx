@@ -29,7 +29,7 @@ const Projects : React.FC = () => {
         <Flex 
             mt="4rem"
             bg="navy.background" 
-            minH="100vh" 
+            minH="125vh" 
             pr="12rem" pl="12rem"
             justify="flex-end"
             overflowX="hidden"
@@ -76,8 +76,8 @@ const Projects : React.FC = () => {
                         <ProjectCard 
                             title="Comix"
                             imageSrc="" 
-                            description='Amet ad eu irure velit mollit exercitation irure aliqua consequat.' 
-                            skills={["Design Patterns", "Java", "UML", "JUnit"]}
+                            description='Applied Object Oriented Design Patterns to create a Java application that allows users to create and manage a collection of comic books.' 
+                            skills={["Design Patterns", "UML", "Java", "OOP"]}
                             githubLink='' 
                         />
                     </motion.div>
@@ -86,8 +86,8 @@ const Projects : React.FC = () => {
                         <ProjectCard 
                             title="Technet" 
                             imageSrc="" 
-                            description='Deserunt laborum proident ut nisi consectetur culpa laborum.' 
-                            skills={["React", "Typescript", "MariaDB", "PHP"]}
+                            description='Created a React Web App used internally by RIT ITS to manage and track employee details. Connected to REST API to fetch and update data.' 
+                            skills={["React", "Typescript", "MariaDB", "PHP", "REST-API", "Playwright"]}
                             githubLink='' 
                         />
                     </motion.div>
@@ -96,8 +96,8 @@ const Projects : React.FC = () => {
                         <ProjectCard 
                             title="Portfolio Website" 
                             imageSrc="" 
-                            description='Deserunt laborum proident ut nisi consectetur culpa laborum.' 
-                            skills={["React", "Chakra UI", "TypeScript"]}
+                            description='Create a responsive portfolio website using React and Chakra UI. Used Framer Motion to add animations and transitions.' 
+                            skills={["React", "Chakra UI", "TypeScript", "Framer-Motion"]}
                             githubLink='' 
                         />
                     </motion.div>
