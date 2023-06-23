@@ -20,7 +20,7 @@ const Navbar : React.FC = () => {
                         <Image 
                             src={`${process.env.PUBLIC_URL}/r-logo-low.png`} 
                             mr="1rem" 
-                            maxW="50px" maxH="50px" 
+                            w="60px" h="50px" 
                         />
                         <Text fontSize="3xl" color={"navy.highlight"}> Robert Walling </Text>
                     </Flex>

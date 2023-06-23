@@ -52,7 +52,7 @@ const ProjectCard: React.FC<ProjectProps> = ({ title, imageSrc, description, ski
                 objectFit="cover" 
                 alignSelf="center"
                 fallbackSrc='https://via.placeholder.com/125' 
-                maxW="125" maxH="125"
+                w="100px" h="100px"
                 align="center"
             />
         </Flex>
