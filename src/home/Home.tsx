@@ -60,7 +60,7 @@ const Home: React.FC = () => {
                     fontSize="2xl"
                     {...getMotionProps(textVariants)}
                 >
-                    Full Stack Software Engineer, Musician, and Creative.
+                    Full Stack Software Engineer, Musician, Creative.
                 </MotionText>
 
                 <MotionButton
