@@ -64,8 +64,7 @@ const Home: React.FC = () => {
                 </MotionText>
 
                 <MotionButton
-                    as="a"
-                    href={`${process.env.PUBLIC_URL}/resume.pdf`}
+                    as="a" href={`${process.env.PUBLIC_URL}/resume.pdf`}
                     target="_blank"
                     ml="auto" mt="1rem"
                     size="lg"
