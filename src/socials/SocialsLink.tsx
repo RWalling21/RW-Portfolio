@@ -15,8 +15,8 @@ const SocialsLink : React.FC<SocialsProps> = ({href, icon, animOrder}) => {
     return (
         <Link href={href} isExternal>
             <MotionButton 
-                aria-label="LinkedIn" 
-                icon={icon} 
+                aria-label="LinkedIn"
+                icon={icon}
                 size="md"
                 isRound={true}
                 bg="navy.button"

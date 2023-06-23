@@ -95,6 +95,7 @@ const Home: React.FC = () => {
                     w="400px"
                     h="400px"
                     borderRadius="lg"
+                    alt="Robert Walling"
                 />
             </MotionBox>
         </Flex>

@@ -30,7 +30,7 @@ const AboutMe : React.FC = () => {
             >
                 <Box>
                     <Text fontSize="5xl" color="lightBlue.headline" textAlign="center" mb="1rem">Who am I?</Text>
-                    <Image src={`${process.env.PUBLIC_URL}/close-selfie.jpeg`} borderRadius="full" w="250px" h="250px" />
+                    <Image src={`${process.env.PUBLIC_URL}/close-selfie.jpeg`} borderRadius="full" w="250px" h="250px" alt="Robert Walling" />
                 </Box>
                 <Box>
                     <Text fontSize="lg" color="lightBlue.paragraph" textAlign="center" maxW="40vw">
