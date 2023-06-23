@@ -92,8 +92,8 @@ const Home: React.FC = () => {
             >
                 <Image
                     src={`${process.env.PUBLIC_URL}/selfie.jpeg`}
-                    maxW="100%"
-                    maxH="100%"
+                    w="400px"
+                    h="400px"
                     borderRadius="lg"
                 />
             </MotionBox>
