@@ -18,9 +18,9 @@ const Navbar : React.FC = () => {
                 <MotionFlex {...motionProps}>
                     <Flex align="center">
                         <Image 
-                            src={`${process.env.PUBLIC_URL}/logo.png`} 
+                            src={`${process.env.PUBLIC_URL}/logo_outline.png`} 
                             mr="1rem" 
-                            w="50px" h="40px" 
+                            w="36px" h="36px" 
                         />
                         <Text fontSize="3xl" color={"navy.highlight"}> Robert Walling </Text>
                     </Flex>

@@ -1,32 +1,74 @@
-import React from 'react';
-import { Flex, Box, Image, Text, VStack, Button } from '@chakra-ui/react';
-import { motion, Variants } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { Flex, Box, Text, VStack, Button } from '@chakra-ui/react';
+import { AnimatePresence, motion, Variants } from 'framer-motion';
 
 // Setting variables for framer-motion
 const MotionBox = motion(Box);
 const MotionText = motion(Text);
 const MotionButton = motion(Button);
 
-const textVariants: Variants = {
+const textVariants = {
     hidden: { opacity: 0, y: -200 },
     visible: { opacity: 1, y: 0, transition: { duration: 1 } },
 };
 
-const buttonVariants: Variants = {
+const buttonVariants = {
     hidden: { opacity: 0, y: 200 },
     visible: { opacity: 1, y: 0, transition: { duration: 1 } },
 };
 
+const terminalTextVariants = {
+    hidden: { opacity: 0, x: '-100%' },
+    visible: { opacity: 1, x: 0, transition: { duration: 0 } },
+};
+
+function getMotionProps(variants: Variants) {
+    return {
+        initial: "hidden",
+        animate: "visible",
+        variants
+    };
+}
 
 const Home: React.FC = () => {
-    // Will be used to set motion props on components
-    function getMotionProps(variants: Variants) {
-        return {
-          initial: "hidden",
-          animate: "visible",
-          variants
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [text, setText] = useState("");
+    const [showCursor, setShowCursor] = useState(true);
+    const roles = ["Software Engineer", "Musician", "Creative"];
+    const [isDeleting, setIsDeleting] = useState(false);
+
+    useEffect(() => {
+        let typingInterval: NodeJS.Timeout;
+        let cursorInterval: NodeJS.Timeout;
+
+        if (!isDeleting && text === roles[currentIndex]) {
+            setTimeout(() => setIsDeleting(true), 1000);
+            return;
+        }
+
+        if (isDeleting && text === "") {
+            setIsDeleting(false);
+            setCurrentIndex((prev) => (prev + 1) % roles.length);
+            return;
+        }
+
+        typingInterval = setInterval(() => {
+            if (isDeleting) {
+                setText(prev => prev.substring(0, prev.length - 1));
+            } else {
+                setText(prev => prev + roles[currentIndex][prev.length]);
+            }
+        }, isDeleting ? 100 : 150);
+
+        cursorInterval = setInterval(() => {
+            setShowCursor(prev => !prev);
+        }, 100);
+
+        return () => {
+            clearInterval(typingInterval);
+            clearInterval(cursorInterval);
         };
-      }
+    }, [currentIndex, text, isDeleting]);
     
     return (
         <Flex
@@ -35,6 +77,7 @@ const Home: React.FC = () => {
             pr="12rem" pl="12rem"
             mt="12rem"
             justify="center"
+            position="relative"
         >
             <VStack
                 align="start"
@@ -52,11 +95,15 @@ const Home: React.FC = () => {
                 </MotionText>
 
                 <MotionText
+                    initial="hidden"
+                    animate="visible"
+                    exit="visible"
+                    variants={terminalTextVariants}
                     color="navy.paragraph"
-                    fontSize="2xl"
-                    {...getMotionProps(textVariants)}
+                    fontSize="3xl"
                 >
-                    Full Stack Software Engineer, Musician, Creative.
+                    {text}
+                    <span style={{ opacity: showCursor ? 1 : 0 }}>_</span>
                 </MotionText>
 
                 <MotionButton
@@ -91,7 +138,7 @@ const Home: React.FC = () => {
                         "0 0 5px 2px rgba(9,198,215, 0.6)"
                     ]
                 }}
-                transition={{ duration: 1, ease: "easeInOut", repeat: Infinity }}
+                transition={{ duration: 1.5, ease: "easeInOut", repeat: Infinity }}
             />
         </Flex>
     );
