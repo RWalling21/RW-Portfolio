@@ -13,7 +13,7 @@ const ContactMe : React.FC = () => {
 
     return (
         <Flex
-            bg="lightBlue.background" 
+            bg="navy.background" 
             minH="75vh" 
             pr="12rem" pl="12rem"
             align="center"
@@ -22,7 +22,7 @@ const ContactMe : React.FC = () => {
             <MotionBox 
                 ref={ref}
                 textAlign="center" 
-                color="lightBlue.paragraph"
+                color="navy.paragraph"
                 animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
                 transition={{ duration: 0.5 }}
             >

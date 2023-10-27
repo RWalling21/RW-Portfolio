@@ -2,7 +2,6 @@ import React from 'react';
 import { Box, Text, Image, VStack, HStack } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import SkillBar from './SkillBar';
 
 const MotionVStack = motion(VStack);
 
@@ -14,7 +13,7 @@ const AboutMe : React.FC = () => {
     return (
         <HStack
             spacing={12}
-            bg="lightBlue.background"
+            bg="navy.background"
             minH="125vh"
             pr="12rem"
             pl="12rem"
@@ -29,11 +28,11 @@ const AboutMe : React.FC = () => {
                 spacing={6}
             >
                 <Box>
-                    <Text fontSize="5xl" color="lightBlue.headline" textAlign="center" mb="1rem">Who am I?</Text>
+                    <Text fontSize="5xl" color="navy.headline" textAlign="center" mb="1rem">Who am I?</Text>
                     <Image src={`${process.env.PUBLIC_URL}/close-selfie.jpeg`} borderRadius="full" w="250px" h="250px" alt="Robert Walling" />
                 </Box>
                 <Box>
-                    <Text fontSize="lg" color="lightBlue.paragraph" textAlign="center" maxW="40vw">
+                    <Text fontSize="lg" color="navy.paragraph" textAlign="center" maxW="40vw">
                         I'm a third-year Software Engineering student at the Rochester Institute of Technology (RIT).
                         I'm passionate about creating scalable, user-focused solutions to real-world problems. 
                         I'm able to design and implement full-stack applications using best practices and modern design patterns.
@@ -47,29 +46,8 @@ const AboutMe : React.FC = () => {
                 mt="4rem"
                 alignItems="center"
             >
-                <Text fontSize="5xl" color="lightBlue.paragraph" textAlign="center" mb="1rem"> Skills </Text>
+                <Text fontSize="5xl" color="navy.paragraph" textAlign="center" mb="1rem"> Skills </Text>
 
-                <MotionVStack 
-                    ref={ref}
-                    display="flex" 
-                    flexWrap="wrap" 
-                    alignItems="center" 
-                    spacing={2}
-                    animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
-                    transition={{ duration: 1 }}
-                >
-                    <SkillBar skill='Java' proficiency={90} />
-                    <SkillBar skill='Javascript' proficiency={90} />
-                    <SkillBar skill='React' proficiency={85} />
-                    <SkillBar skill='Typescript' proficiency={85} />
-                    <SkillBar skill='UML Design' proficiency={80} />
-                    <SkillBar skill='Python' proficiency={80} />
-                    <SkillBar skill='Angular' proficiency={75} />
-                    <SkillBar skill='C++' proficiency={75} />
-                    <SkillBar skill='Node.JS' proficiency={75} />
-                    <SkillBar skill='MariaDB' proficiency={70} />
-                    <SkillBar skill='Docker' proficiency={65} />
-                </MotionVStack>
             </Box>
         </HStack>
     )

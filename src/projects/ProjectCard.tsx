@@ -36,7 +36,7 @@ const ProjectCard: React.FC<ProjectProps> = ({ title, imageSrc, description, ski
             variants={variants} 
             initial="hidden" 
             animate="show"
-            bg={"lightBlue.cardBackground"} 
+            bg={"navy.cardBackground"} 
             p="5"
             borderRadius="md" 
             shadow="md"
@@ -58,11 +58,11 @@ const ProjectCard: React.FC<ProjectProps> = ({ title, imageSrc, description, ski
         </Flex>
 
         <Flex flex="1" direction="column">
-            <Text fontSize="xl" fontWeight="bold" color={"lightBlue.cardHeading"}>
+            <Text fontSize="xl" fontWeight="bold" color={"navy.paragraph"}>
                 {title}
             </Text>
 
-            <Text color={"lightBlue.cardParagraph"}>
+            <Text color={"navy.paragraph"}>
                 {description}
             </Text>
             

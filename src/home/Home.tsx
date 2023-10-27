@@ -17,10 +17,6 @@ const buttonVariants: Variants = {
     visible: { opacity: 1, y: 0, transition: { duration: 1 } },
 };
 
-const imageVariants: Variants = {
-    hidden: { opacity: 0, scale: 0 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
-};
 
 const Home: React.FC = () => {
     // Will be used to set motion props on components
@@ -82,17 +78,21 @@ const Home: React.FC = () => {
             </VStack>
 
             <MotionBox
-                maxW="400px" maxH="400px"
-                flex="2"
-                {...getMotionProps(imageVariants)}
-            >
-                <Image
-                    src={`${process.env.PUBLIC_URL}/selfie.jpeg`}
-                    w="400px" h="400px"
-                    borderRadius="lg"
-                    alt="Robert Walling"
-                />
-            </MotionBox>
+                w="400px" h="400px"
+                borderRadius="lg"
+                backgroundSize="cover"
+                backgroundImage={`url(${process.env.PUBLIC_URL}/selfie.jpeg)`}
+                animate={{
+                    boxShadow: [
+                        "0 0 5px 2px rgba(9,198,215, 0.6)", 
+                        "0 0 10px 3.5px rgba(9,198,215, 0.75)",
+                        "0 0 15px 5px rgba(9,198,215, 0.9)",
+                        "0 0 10px 3.5px rgba(9,198,215, 0.75)",
+                        "0 0 5px 2px rgba(9,198,215, 0.6)"
+                    ]
+                }}
+                transition={{ duration: 1, ease: "easeInOut", repeat: Infinity }}
+            />
         </Flex>
     );
 };
