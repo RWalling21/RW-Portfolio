@@ -18,7 +18,7 @@ const Navbar : React.FC = () => {
                 <MotionFlex {...motionProps}>
                     <Flex align="center">
                         <Image 
-                            src={`${process.env.PUBLIC_URL}/r-logo-low.png`} 
+                            src={`${process.env.PUBLIC_URL}/logo.png`} 
                             mr="1rem" 
                             w="50px" h="40px" 
                         />

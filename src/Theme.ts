@@ -2,7 +2,7 @@ import { extendTheme } from "@chakra-ui/react";
 
 const Theme = extendTheme({
   colors: {
-    main: {
+    navy: {
       background: "#1E2024",
       headline: "#00b5c6",
       paragraph: "#F3F7FF",
