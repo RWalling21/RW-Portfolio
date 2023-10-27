@@ -60,15 +60,22 @@ const Home: React.FC = () => {
             }
         }, isDeleting ? 100 : 150);
 
-        cursorInterval = setInterval(() => {
-            setShowCursor(prev => !prev);
-        }, 100);
-
         return () => {
             clearInterval(typingInterval);
             clearInterval(cursorInterval);
         };
     }, [currentIndex, text, isDeleting]);
+
+    useEffect(() => {
+        const cursorInterval = setInterval(() => {
+            setShowCursor(prev => !prev);
+        }, 300);
+    
+        return () => {
+            clearInterval(cursorInterval);
+        };
+    }, []);
+    
     
     return (
         <Flex
