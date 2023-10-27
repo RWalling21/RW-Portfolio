@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Flex, Box, Text, VStack, Button } from '@chakra-ui/react';
-import { AnimatePresence, motion, Variants } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 // Setting variables for framer-motion
 const MotionBox = motion(Box);
@@ -30,13 +30,17 @@ function getMotionProps(variants: Variants) {
     };
 }
 
+// Misc Variables
+const roles = ["Software Engineer", "Web Designer", "Creative Problem Solver"];
+
 const Home: React.FC = () => {
+    // State 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [text, setText] = useState("");
     const [showCursor, setShowCursor] = useState(true);
-    const roles = ["Software Engineer", "Musician", "Creative"];
     const [isDeleting, setIsDeleting] = useState(false);
 
+    // Responsible for text effect 
     useEffect(() => {
         let typingInterval: NodeJS.Timeout;
         let cursorInterval: NodeJS.Timeout;
@@ -66,6 +70,7 @@ const Home: React.FC = () => {
         };
     }, [currentIndex, text, isDeleting]);
 
+    // Responsible for terminal blink effect 
     useEffect(() => {
         const cursorInterval = setInterval(() => {
             setShowCursor(prev => !prev);
@@ -75,7 +80,6 @@ const Home: React.FC = () => {
             clearInterval(cursorInterval);
         };
     }, []);
-    
     
     return (
         <Flex
