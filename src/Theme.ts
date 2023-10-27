@@ -3,12 +3,12 @@ import { extendTheme } from "@chakra-ui/react";
 const Theme = extendTheme({
   colors: {
     navy: {
-      background: "#232946",
-      headline: "#fffffe",
-      paragraph: "#b8c1ec",
-      button: "#eebbc3",
-      buttonText: "#232946",
-      buttonHover: "#d4d8f0"
+      background: "#1E2024",
+      headline: "#09C6D7",
+      paragraph: "#F3F7FF",
+      button: "#09C6D7",
+      buttonText: "#1E2024",
+      buttonHover: "#E67A00"
     },
     lightBlue: {
       background: "#d4d8f0",
